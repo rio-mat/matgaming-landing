@@ -125,9 +125,12 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link to="/contact" className="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
-            {t('nav.getQuote')}
-          </Link>
+          <a href="https://bo.matgaming.net" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition px-3 py-2 rounded-lg hover:bg-white/5 border border-border">
+            Backoffice
+          </a>
+          <a href="https://matslot.com" target="_blank" rel="noopener noreferrer" className="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
+            Platform
+          </a>
         </div>
 
         <button className="lg:hidden text-white" onClick={() => setOpen(!open)}>
@@ -159,9 +162,14 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          <Link to="/contact" className="bg-brand text-white px-5 py-2 rounded-lg text-sm font-semibold text-center mt-2">
-            {t('nav.getQuote')}
-          </Link>
+          <div className="flex gap-2 mt-2">
+            <a href="https://bo.matgaming.net" target="_blank" rel="noopener noreferrer" className="flex-1 text-center text-sm text-slate-300 border border-border px-4 py-2 rounded-lg">
+              Backoffice
+            </a>
+            <a href="https://matslot.com" target="_blank" rel="noopener noreferrer" className="flex-1 text-center bg-brand text-white px-4 py-2 rounded-lg text-sm font-semibold">
+              Platform
+            </a>
+          </div>
         </div>
       )}
     </nav>
