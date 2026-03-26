@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --color-brand: #ea580c;
+  --color-brand-light: #f97316;
+  --color-brand-dark: #c2410c;
+  --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
+  --color-surface: #0a1628;
+  --color-surface-2: #0f1f3a;
+  --color-surface-3: #162a4a;
+  --color-border: #1c3054;
+  --color-border-light: #264170;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: #8b9dc3;
+  font-family: var(--font-sans);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f97316, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--color-border-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(234, 88, 12, 0.08);
+}
+
+.provider-logo {
+  filter: grayscale(1) brightness(0.7);
+  transition: all 0.3s;
+}
+
+.provider-logo:hover {
+  filter: grayscale(0) brightness(1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logo-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.logo-scroll:hover {
+  animation-play-state: paused;
+}
