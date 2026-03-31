@@ -3,10 +3,90 @@ import nodemailer from 'nodemailer';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { readFileSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const indexHtml = readFileSync(join(__dirname, 'dist', 'index.html'), 'utf-8');
+
+// Per-route SEO meta data
+const pageMeta = {
+  '/': {
+    title: 'MATGAMING - B2B iGaming Platform & Casino Slot Aggregator',
+    description: 'MATGAMING - B2B iGaming technology provider. Casino aggregator, sportsbook aggregator, white label platform, crypto casino and iGaming licensing. 10,000+ games from 200+ providers.',
+  },
+  '/casino-aggregator': {
+    title: 'Casino Aggregator - 10,000+ Games, 200+ Providers | MATGAMING',
+    description: 'Access 10,000+ casino games from 200+ providers through a single API. Slots, live casino, table games, crash games from Pragmatic Play, Evolution, NetEnt and more.',
+  },
+  '/sportsbook-aggregator': {
+    title: 'Sportsbook Aggregator - BetConstruct, Digitain, Betradar | MATGAMING',
+    description: 'BetConstruct, Digitain and Betradar sportsbook integration. Pre-match and live betting on 50+ sports, thousands of markets from leading providers.',
+  },
+  '/white-label': {
+    title: 'White Label Casino Platform - Launch in Weeks | MATGAMING',
+    description: 'Launch your online casino in weeks with our turnkey White Label platform. Complete backoffice, bonus engine, 100+ payment methods and 10,000+ games included.',
+  },
+  '/crypto-casino': {
+    title: 'Crypto Casino Platform - Bitcoin, Ethereum, 50+ Coins | MATGAMING',
+    description: 'Native cryptocurrency casino platform. Accept Bitcoin, Ethereum, USDT and 50+ coins with instant transactions, cold storage security and full backoffice.',
+  },
+  '/curacao-license': {
+    title: 'Curacao Gaming License - Orange & Green in 6-8 Weeks | MATGAMING',
+    description: 'Fast-track Curacao gaming license. Orange and Green licenses processed in 6-8 weeks with full legal documentation and compliance support.',
+  },
+  '/anjouan-license': {
+    title: 'Anjouan Gaming License - Master & Sub in 4-6 Weeks | MATGAMING',
+    description: 'Anjouan iGaming license — master and sub-license in 4-6 weeks. Fastest processing times, competitive costs and full regulatory support.',
+  },
+  '/about': {
+    title: 'About MATGAMING - B2B iGaming Technology Provider',
+    description: 'MATGAMING is a B2B iGaming technology provider delivering casino aggregation, sportsbook solutions, white label platforms, crypto casino infrastructure and licensing services.',
+  },
+  '/blog': {
+    title: 'Blog & Insights - iGaming Industry Knowledge | MATGAMING',
+    description: 'iGaming industry insights, product guides, event coverage and expert analysis. Learn about casino aggregation, licensing, crypto casinos and operator strategies.',
+  },
+  '/contact': {
+    title: 'Contact MATGAMING - Get a Quote for iGaming Solutions',
+    description: 'Get in touch with MATGAMING for casino aggregation, sportsbook integration, white label platform, crypto casino or licensing services. We respond within 24 hours.',
+  },
+};
+
+function renderPage(path) {
+  const meta = pageMeta[path] || pageMeta['/'];
+  let html = indexHtml;
+  html = html.replace(
+    /<title>.*?<\/title>/,
+    `<title>${meta.title}</title>`
+  );
+  html = html.replace(
+    /<meta name="description" content=".*?">/,
+    `<meta name="description" content="${meta.description}">`
+  );
+  // Add canonical
+  const canonical = `https://matgaming.net${path === '/' ? '' : path}`;
+  html = html.replace(
+    /<link rel="canonical".*?>/,
+    `<link rel="canonical" href="${canonical}" />`
+  );
+  // Update OG tags
+  html = html.replace(
+    /<meta property="og:title".*?>/,
+    `<meta property="og:title" content="${meta.title}" />`
+  );
+  html = html.replace(
+    /<meta property="og:description".*?>/,
+    `<meta property="og:description" content="${meta.description}" />`
+  );
+  html = html.replace(
+    /<meta property="og:url".*?>/,
+    `<meta property="og:url" content="${canonical}" />`
+  );
+  return html;
+}
 
 app.use(cors());
 app.use(express.json());
@@ -68,7 +148,7 @@ app.post('/api/contact', async (req, res) => {
       subject: `New Inquiry from ${name} — ${serviceName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: #6366f1; padding: 20px 30px; border-radius: 8px 8px 0 0;">
+          <div style="background: #ea580c; padding: 20px 30px; border-radius: 8px 8px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 20px;">New Contact Form Submission</h1>
           </div>
           <div style="background: #f8fafc; padding: 30px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px;">
@@ -79,7 +159,7 @@ app.post('/api/contact', async (req, res) => {
               </tr>
               <tr>
                 <td style="padding: 10px 0; color: #64748b; vertical-align: top;">Email</td>
-                <td style="padding: 10px 0; color: #1e293b;"><a href="mailto:${email}" style="color: #6366f1;">${email}</a></td>
+                <td style="padding: 10px 0; color: #1e293b;"><a href="mailto:${email}" style="color: #ea580c;">${email}</a></td>
               </tr>
               <tr>
                 <td style="padding: 10px 0; color: #64748b; vertical-align: top;">Company</td>
@@ -96,7 +176,7 @@ app.post('/api/contact', async (req, res) => {
             </table>
           </div>
           <p style="color: #94a3b8; font-size: 12px; margin-top: 16px; text-align: center;">
-            Sent from matgaming.com contact form
+            Sent from matgaming.net contact form
           </p>
         </div>
       `,
@@ -109,8 +189,10 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+// SPA fallback with per-route SEO meta tags
 app.get('/{*path}', (req, res) => {
-  res.sendFile(join(__dirname, 'dist', 'index.html'));
+  const path = req.path.replace(/\/$/, '') || '/';
+  res.send(renderPage(path));
 });
 
 app.listen(PORT, () => {
