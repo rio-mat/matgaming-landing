@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /cgi-sys/
+Disallow: /ru/
 
 Sitemap: https://matgaming.net/sitemap.xml

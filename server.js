@@ -10,6 +10,12 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// Redirect old hosting URLs to homepage
+app.get('/cgi-sys/*path', (req, res) => res.redirect(301, '/'));
+app.get('/ru', (req, res) => res.redirect(301, '/'));
+app.get('/ru/*path', (req, res) => res.redirect(301, '/'));
+
 app.use(express.static(join(__dirname, 'dist')));
 
 const transporter = nodemailer.createTransport({
