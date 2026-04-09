@@ -3,6 +3,10 @@ import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useTranslation, Trans } from 'react-i18next'
+import { BorderBeam } from './magicui/border-beam'
+import { DotPattern } from './magicui/dot-pattern'
+import { Ripple } from './magicui/ripple'
+import { ShimmerButton } from './magicui/shimmer-button'
 
 export { Trans }
 
@@ -60,6 +64,7 @@ export function PageHero({ badge, title, subtitle, cta, ctaHref = '/contact' }: 
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-brand/8 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/6 rounded-full blur-[120px]" />
+        <DotPattern className="opacity-30" />
       </div>
       <div className="relative max-w-5xl mx-auto px-6 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
@@ -81,7 +86,7 @@ export function PageHero({ badge, title, subtitle, cta, ctaHref = '/contact' }: 
         </motion.p>
         {cta && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-            <Link to={ctaHref} className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_50px_rgba(99,102,241,0.4)]">
+            <Link to={ctaHref} className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_30px_rgba(234,88,12,0.3)] hover:shadow-[0_0_50px_rgba(234,88,12,0.4)]">
               {cta} <ArrowRight size={18} />
             </Link>
           </motion.div>
@@ -95,12 +100,13 @@ export function FeatureGrid({ features }: { features: { icon: React.ElementType;
   return (
     <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
       {features.map((f) => (
-        <motion.div key={f.title} variants={fadeUp} className="card p-6 group">
+        <motion.div key={f.title} variants={fadeUp} className="card p-6 group relative overflow-hidden">
           <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center mb-4 group-hover:bg-brand/20 transition">
             <f.icon size={20} className="text-brand-light" />
           </div>
           <h3 className="font-display text-lg font-semibold text-white mb-2">{f.title}</h3>
           <p className="text-sm text-slate-400 leading-relaxed">{f.desc}</p>
+          <BorderBeam size={120} duration={15} colorFrom="#ea580c" colorTo="#f59e0b" />
         </motion.div>
       ))}
     </motion.div>
@@ -141,12 +147,22 @@ export function CTABanner() {
         className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-brand to-accent p-12 md:p-16 text-center"
         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
       >
+        <Ripple mainCircleSize={100} mainCircleOpacity={0.15} numCircles={6} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.1),transparent_60%)]" />
-        <div className="relative">
+        <div className="relative z-10">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">{t('cta.title')}</h2>
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{t('cta.subtitle')}</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 bg-white text-brand-dark px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition">
-            {t('cta.button')} <ArrowRight size={18} />
+          <Link to="/contact">
+            <ShimmerButton
+              shimmerColor="#ea580c"
+              background="rgba(255,255,255,1)"
+              borderRadius="12px"
+              className="px-8 py-4 mx-auto"
+            >
+              <span className="text-brand-dark font-semibold flex items-center gap-2">
+                {t('cta.button')} <ArrowRight size={18} />
+              </span>
+            </ShimmerButton>
           </Link>
         </div>
       </motion.div>

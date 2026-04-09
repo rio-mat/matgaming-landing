@@ -1,11 +1,18 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Gamepad2, Trophy, Layers, Bitcoin, ScrollText, Shield, ArrowRight, ChevronRight, ChevronLeft } from 'lucide-react'
-import { fadeUp, stagger, Section, SectionHeader, CTABanner } from '../components/common'
+import { Section, SectionHeader, CTABanner } from '../components/common'
 import { casinoProviders } from '../data/providers'
 import { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import SEO from '../components/SEO'
+import { Marquee } from '../components/magicui/marquee'
+import { NumberTicker } from '../components/magicui/number-ticker'
+import { ShimmerButton } from '../components/magicui/shimmer-button'
+import { BorderBeam } from '../components/magicui/border-beam'
+import { Particles } from '../components/magicui/particles'
+import { BlurFade } from '../components/magicui/blur-fade'
+import { AnimatedShinyText } from '../components/magicui/animated-shiny-text'
 
 const servicesMeta = [
   { icon: Gamepad2, key: 'casinoAgg', titleKey: 'nav.casinoAggregator', href: '/casino-aggregator', color: 'from-orange-500 to-amber-500' },
@@ -22,7 +29,6 @@ function HeroBanner() {
   const { t } = useTranslation()
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
-
   const banners = t('banners', { returnObjects: true }) as { badge: string; title: string; subtitle: string; cta: string }[]
 
   const goTo = useCallback((index: number) => {
@@ -46,7 +52,6 @@ function HeroBanner() {
   }, [next])
 
   const b = banners[current]
-
   const variants = {
     enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
     center: { x: 0, opacity: 1 },
@@ -55,11 +60,14 @@ function HeroBanner() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0">
+      {/* Particles background */}
+      <Particles className="absolute inset-0 z-0" quantity={40} color="#ea580c" size={0.5} />
+
+      <div className="absolute inset-0 z-[1]">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-500/8 rounded-full blur-[180px]" />
         <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[140px]" />
       </div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--color-surface)_70%)]" />
+      <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--color-surface)_70%)]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 text-center">
         <AnimatePresence mode="wait" custom={direction}>
@@ -72,9 +80,9 @@ function HeroBanner() {
             exit="exit"
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
-            <span className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-5 py-2 text-sm text-brand-light font-medium mb-8">
+            <span className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-5 py-2 text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-brand rounded-full animate-pulse" />
-              {b.badge}
+              <AnimatedShinyText className="text-brand-light">{b.badge}</AnimatedShinyText>
             </span>
 
             <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.05] mb-6 whitespace-pre-line">
@@ -86,8 +94,15 @@ function HeroBanner() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to={bannerHrefs[current]} className="group bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(234,88,12,0.3)]">
-                {b.cta} <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
+              <Link to={bannerHrefs[current]}>
+                <ShimmerButton
+                  shimmerColor="#f97316"
+                  background="rgba(234,88,12,1)"
+                  borderRadius="12px"
+                  className="px-8 py-4 shadow-[0_0_30px_rgba(234,88,12,0.3)]"
+                >
+                  {b.cta} <ArrowRight size={18} />
+                </ShimmerButton>
               </Link>
               <Link to="/contact" className="border border-border hover:border-border-light text-white px-8 py-4 rounded-xl font-semibold transition inline-flex items-center justify-center">
                 {t('home.getQuote')}
@@ -121,10 +136,10 @@ function ServiceCards() {
   return (
     <Section id="services">
       <SectionHeader badge={t('home.whatWeDo')} i18nKey="home.servicesTitle" subtitle={t('home.servicesSubtitle')} />
-      <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-        {servicesMeta.map((svc) => (
-          <motion.div key={svc.key} variants={fadeUp}>
-            <Link to={svc.href} className="card block p-8 h-full group">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {servicesMeta.map((svc, i) => (
+          <BlurFade key={svc.key} delay={i * 0.08}>
+            <Link to={svc.href} className="card block p-8 h-full group relative overflow-hidden">
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} mb-5`}>
                 <svc.icon size={24} className="text-white" />
               </div>
@@ -133,10 +148,11 @@ function ServiceCards() {
               <span className="inline-flex items-center gap-1 text-sm text-brand-light font-medium group-hover:gap-2 transition-all">
                 {t('home.learnMore')} <ArrowRight size={14} />
               </span>
+              <BorderBeam size={180} duration={12} delay={i * 2} />
             </Link>
-          </motion.div>
+          </BlurFade>
         ))}
-      </motion.div>
+      </div>
     </Section>
   )
 }
@@ -147,17 +163,25 @@ function LogoMarquee() {
   return (
     <Section>
       <SectionHeader i18nKey="home.trustedProviders" subtitle={t('home.trustedSubtitle')} />
-      <div className="overflow-hidden relative">
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface to-transparent z-10" />
-        <div className="flex logo-scroll w-max">
-          {[...logos, ...logos].map((p, i) => (
-            <div key={`${p.name}-${i}`} className="flex items-center gap-2.5 mx-2 h-12 bg-surface-2 border border-border rounded-xl px-4 shrink-0">
+      <div className="relative">
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
+        <Marquee pauseOnHover className="[--duration:50s] [--gap:0.75rem]">
+          {logos.map((p) => (
+            <div key={p.name} className="flex items-center gap-2.5 h-12 bg-surface-2 border border-border rounded-xl px-4 shrink-0">
               <img src={`https://www.google.com/s2/favicons?sz=32&domain=${p.domain}`} alt="" className="w-5 h-5 rounded" loading="lazy" />
               <span className="text-xs text-slate-500 whitespace-nowrap">{p.name}</span>
             </div>
           ))}
-        </div>
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:50s] [--gap:0.75rem] mt-3">
+          {logos.slice().reverse().map((p) => (
+            <div key={p.name} className="flex items-center gap-2.5 h-12 bg-surface-2 border border-border rounded-xl px-4 shrink-0">
+              <img src={`https://www.google.com/s2/favicons?sz=32&domain=${p.domain}`} alt="" className="w-5 h-5 rounded" loading="lazy" />
+              <span className="text-xs text-slate-500 whitespace-nowrap">{p.name}</span>
+            </div>
+          ))}
+        </Marquee>
       </div>
     </Section>
   )
@@ -165,21 +189,39 @@ function LogoMarquee() {
 
 function Stats() {
   const { t } = useTranslation()
-  const stats = [
-    { value: '10,000+', label: t('home.casinoGames') },
-    { value: '200+', label: t('home.gameProviders') },
-    { value: '3', label: t('home.sportsbookPlatforms') },
-    { value: '4-8', label: t('home.weeksToLaunch') },
-  ]
   return (
     <Section>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {stats.map((s) => (
-          <motion.div key={s.label} className="text-center p-8 card" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">{s.value}</div>
-            <div className="text-sm text-slate-400">{s.label}</div>
-          </motion.div>
-        ))}
+        <BlurFade delay={0}>
+          <div className="text-center p-8 card">
+            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">
+              <NumberTicker value={10000} />+
+            </div>
+            <div className="text-sm text-slate-400">{t('home.casinoGames')}</div>
+          </div>
+        </BlurFade>
+        <BlurFade delay={0.1}>
+          <div className="text-center p-8 card">
+            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">
+              <NumberTicker value={200} />+
+            </div>
+            <div className="text-sm text-slate-400">{t('home.gameProviders')}</div>
+          </div>
+        </BlurFade>
+        <BlurFade delay={0.2}>
+          <div className="text-center p-8 card">
+            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">
+              <NumberTicker value={3} />
+            </div>
+            <div className="text-sm text-slate-400">{t('home.sportsbookPlatforms')}</div>
+          </div>
+        </BlurFade>
+        <BlurFade delay={0.3}>
+          <div className="text-center p-8 card">
+            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">4-8</div>
+            <div className="text-sm text-slate-400">{t('home.weeksToLaunch')}</div>
+          </div>
+        </BlurFade>
       </div>
     </Section>
   )
