@@ -126,7 +126,18 @@
     "sendAnother": "Send another message",
     "privacy": "By submitting this form, you agree to our privacy policy. We'll never share your data with third parties.",
     "departments": "Find the Right <1>Department</1>",
-    "departmentsSubtitle": "Reach the team that can help you most. Click to send a direct email."
+    "departmentsSubtitle": "Reach the team that can help you most. Click to send a direct email.",
+    "heroBadge": "Contact",
+    "heroTitle": "Ready to Start a ",
+    "heroTitleHighlight": "Conversation?",
+    "heroSubtitle": "Fill out the form below and our team will get back to you within 24 hours with a tailored proposal for your business.",
+    "description": "Whether you're launching a new casino, expanding into sports betting, or need help with licensing — our experts are ready to assist.",
+    "emailLabel": "Email",
+    "supportLabel": "Support",
+    "officesLabel": "Offices",
+    "responseTimeText": "We typically respond within <1>24 hours</1>",
+    "departmentTitle": "Find the Right <1>Department</1>",
+    "departmentSubtitle": "Reach the team that can help you most. Click to send a direct email."
   },
   "casinoAgg": {
     "heroTitle": "The Largest Casino Content Library",
@@ -182,7 +193,14 @@
     "b3": "Unified reporting dashboard",
     "b4": "Automatic new game releases",
     "b5": "Provider-level configuration",
-    "b6": "Dedicated account manager"
+    "b6": "Dedicated account manager",
+    "heroTitleHighlight": "Content Library",
+    "s1Title": "Connect Our API",
+    "s1Desc": "Integrate our RESTful API into your platform. Comprehensive documentation, sandbox environment and dedicated technical support included.",
+    "s2Title": "Configure Your Lobby",
+    "s2Desc": "Choose which providers and games to activate. Set up categories, featured games, geo-restrictions and player preferences.",
+    "s3Title": "Go Live",
+    "s3Desc": "Launch your game lobby and start generating revenue. We handle all provider communication, updates and compliance behind the scenes."
   },
   "sportsbookAgg": {
     "heroTitle": "World-Class Sports Betting",
@@ -299,7 +317,28 @@
     "ps3Title": "Integration",
     "ps3Desc": "Payment methods, games and any third-party tools are connected and tested.",
     "ps4Title": "Go Live",
-    "ps4Desc": "Your casino goes live with ongoing technical support and account management."
+    "ps4Desc": "Your casino goes live with ongoing technical support and account management.",
+    "includedBadge": "All-in-One",
+    "includedSubtitle": "Our White Label platform is a complete, production-ready casino solution. No development required — just connect your domain and go live.",
+    "paymentBadge": "Payments",
+    "paymentTitle": "100+ Payment Methods",
+    "paymentDesc": "Accept deposits and process withdrawals globally. Credit cards, bank transfers, e-wallets, cryptocurrency and local payment methods for every market.",
+    "payCard1Title": "Cards & Banks",
+    "payCard1Desc": "Visa, Mastercard, bank transfers",
+    "payCard2Title": "E-Wallets",
+    "payCard2Desc": "Skrill, Neteller, ecoPayz, MuchBetter",
+    "payCard3Title": "Local Methods",
+    "payCard3Desc": "PIX, UPI, GCash, M-Pesa & more",
+    "payCard4Title": "Crypto",
+    "payCard4Desc": "BTC, ETH, USDT, LTC & 50+ coins",
+    "step1Title": "Consultation",
+    "step1Desc": "We discuss your requirements, target market, preferred games and payment methods.",
+    "step2Title": "Setup & Branding",
+    "step2Desc": "We configure the platform with your logo, colors, domain and preferred settings.",
+    "step3Title": "Integration",
+    "step3Desc": "Payment methods, games and any third-party tools are connected and tested.",
+    "step4Title": "Go Live",
+    "step4Desc": "Your casino goes live with ongoing technical support and account management."
   },
   "cryptoCasino": {
     "heroTitle": "Native Crypto Casino Platform",
@@ -348,7 +387,11 @@
     "f11Title": "Configurable Limits",
     "f11Desc": "Set minimum/maximum deposit and withdrawal amounts per coin. Configure auto-withdrawal thresholds and manual review triggers.",
     "f12Title": "Full Backoffice",
-    "f12Desc": "Same powerful backoffice as our White Label platform: player management, bonus engine, risk tools, reports and affiliate system."
+    "f12Desc": "Same powerful backoffice as our White Label platform: player management, bonus engine, risk tools, reports and affiliate system.",
+    "heroBadge": "Crypto Casino",
+    "whyBadge": "Why Crypto?",
+    "whyTitle": "The Advantages of Crypto Casinos",
+    "whyDesc": "Cryptocurrency casinos are the fastest-growing segment in iGaming. Lower costs, faster transactions, global reach and no dependency on traditional banking infrastructure."
   },
   "curacaoLicense": {
     "heroTitle": "Curacao Gaming License",
@@ -400,7 +443,9 @@
     "sf5Title": "International Recognition",
     "sf5Desc": "Curacao gaming licenses are internationally recognized and accepted by major payment processors, game providers and affiliate networks.",
     "sf6Title": "Ongoing Support",
-    "sf6Desc": "Post-licensing compliance support, annual renewal assistance, regulatory updates and consultation for any compliance questions."
+    "sf6Desc": "Post-licensing compliance support, annual renewal assistance, regulatory updates and consultation for any compliance questions.",
+    "licenseTypesBadge": "License Types",
+    "licenseTypesSubtitle": "Choose the license type that best fits your business model and growth plans."
   },
   "anjouanLicense": {
     "heroTitle": "Anjouan Gaming License",
@@ -479,7 +524,23 @@
     "sf5Title": "Growing Acceptance",
     "sf5Desc": "Anjouan licenses are rapidly gaining acceptance among game providers, payment processors and affiliate networks worldwide.",
     "sf6Title": "Cost Effective",
-    "sf6Desc": "Competitive setup fees and annual renewal costs make Anjouan one of the most affordable jurisdictions for iGaming licensing."
+    "sf6Desc": "Competitive setup fees and annual renewal costs make Anjouan one of the most affordable jurisdictions for iGaming licensing.",
+    "licenseTypesBadge": "License Types",
+    "licenseTypesSubtitle": "Whether you want full autonomy with a master license or a quick start with a sub-license, we handle the process end to end.",
+    "contactUs": "Contact us",
+    "anjouan4_6": "4-6 weeks",
+    "curacao6_8": "6-8 weeks",
+    "available": "Available",
+    "availableGreen": "Available (Green)",
+    "availableOrange": "Available (Orange)",
+    "lower": "Lower",
+    "moderate": "Moderate",
+    "competitive": "Competitive",
+    "standard": "Standard",
+    "growingRapidly": "Growing rapidly",
+    "wellEstablished": "Well established",
+    "expanding": "Expanding",
+    "widelyRecognized": "Widely recognized"
   },
   "about": {
     "badge": "About MATGAMING",
@@ -551,7 +612,8 @@
     "why5": "Fast response times and hands-on support",
     "why6": "Flexible commercial models that scale with you",
     "why7": "Proven technology powering operators globally",
-    "why8": "Regulatory expertise across multiple jurisdictions"
+    "why8": "Regulatory expertise across multiple jurisdictions",
+    "heroBadge": "About MATGAMING"
   },
   "blog": {
     "badge": "Blog & Insights",
@@ -565,6 +627,7 @@
     "crypto": "Crypto",
     "allArticles": "All Articles",
     "readMore": "Read more",
+    "heroBadge": "Blog & Insights",
     "posts": [
       {
         "title": "How to Launch an Online Casino in 2025: The Complete Guide",

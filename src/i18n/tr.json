@@ -126,7 +126,18 @@
     "sendAnother": "Yeni mesaj gonder",
     "privacy": "Bu formu gondererek gizlilik politikamizi kabul etmis olursunuz. Verilerinizi asla ucuncu taraflarla paylasmayiz.",
     "departments": "Dogru <1>Departmani</1> Bulun",
-    "departmentsSubtitle": "Size en cok yardimci olabilecek ekibe ulasin. Dogrudan e-posta gondermek icin tiklayin."
+    "departmentsSubtitle": "Size en cok yardimci olabilecek ekibe ulasin. Dogrudan e-posta gondermek icin tiklayin.",
+    "heroBadge": "İletişim",
+    "heroTitle": "Bir ",
+    "heroTitleHighlight": "Konuşmaya Başlamaya Hazır Mısınız?",
+    "heroSubtitle": "Aşağıdaki formu doldurun, ekibimiz 24 saat içinde işletmenize özel bir teklifle size dönüş yapacaktır.",
+    "description": "Yeni bir casino başlatıyor, spor bahislerine açılıyor ya da lisanslama konusunda desteğe ihtiyaç duyuyorsanız — uzman ekibimiz yardıma hazır.",
+    "emailLabel": "E-posta",
+    "supportLabel": "Destek",
+    "officesLabel": "Ofisler",
+    "responseTimeText": "Genellikle <1>24 saat</1> içinde yanıt veriyoruz",
+    "departmentTitle": "Doğru <1>Departmanı</1> Bulun",
+    "departmentSubtitle": "Size en çok yardımcı olabilecek ekibe ulaşın. Doğrudan e-posta göndermek için tıklayın."
   },
   "casinoAgg": {
     "heroTitle": "En Buyuk Casino Icerik Kutuphanesi",
@@ -182,7 +193,14 @@
     "b3": "Birlesik raporlama panosu",
     "b4": "Otomatik yeni oyun yayinlari",
     "b5": "Saglayici bazinda yapilandirma",
-    "b6": "Ozel hesap yoneticisi"
+    "b6": "Ozel hesap yoneticisi",
+    "heroTitleHighlight": "İçerik Kütüphanesi",
+    "s1Title": "API'mize Bağlanın",
+    "s1Desc": "RESTful API'mizi platformunuza entegre edin. Kapsamlı dokümantasyon, sandbox ortamı ve özel teknik destek dahildir.",
+    "s2Title": "Lobinizi Yapılandırın",
+    "s2Desc": "Hangi sağlayıcıları ve oyunları aktive edeceğinizi seçin. Kategoriler, öne çıkan oyunlar, coğrafi kısıtlamalar ve oyuncu tercihlerini ayarlayın.",
+    "s3Title": "Yayına Geçin",
+    "s3Desc": "Oyun lobinizi başlatın ve gelir elde etmeye başlayın. Tüm sağlayıcı iletişimi, güncellemeler ve uyumluluğu biz perde arkasında yönetiyoruz."
   },
   "sportsbookAgg": {
     "heroTitle": "Dunya Standartlarinda Spor Bahisleri",
@@ -299,7 +317,28 @@
     "ps3Title": "Entegrasyon",
     "ps3Desc": "Odeme yontemleri, oyunlar ve ucuncu taraf araclar baglanip test ediliyor.",
     "ps4Title": "Yayina Gecis",
-    "ps4Desc": "Casinonuz surekli teknik destek ve hesap yonetimiyle yayina aliniyor."
+    "ps4Desc": "Casinonuz surekli teknik destek ve hesap yonetimiyle yayina aliniyor.",
+    "includedBadge": "Hepsi Bir Arada",
+    "includedSubtitle": "White Label platformumuz eksiksiz, üretime hazır bir casino çözümüdür. Geliştirme gerektirmez — sadece alan adınızı bağlayıp yayına geçin.",
+    "paymentBadge": "Ödemeler",
+    "paymentTitle": "100+ Ödeme Yöntemi",
+    "paymentDesc": "Dünya genelinde yatırım kabul edin ve çekim işleyin. Kredi kartları, banka transferleri, e-cüzdanlar, kripto para ve her pazar için yerel ödeme yöntemleri.",
+    "payCard1Title": "Kartlar & Bankalar",
+    "payCard1Desc": "Visa, Mastercard, banka transferleri",
+    "payCard2Title": "E-Cüzdanlar",
+    "payCard2Desc": "Skrill, Neteller, ecoPayz, MuchBetter",
+    "payCard3Title": "Yerel Yöntemler",
+    "payCard3Desc": "PIX, UPI, GCash, M-Pesa ve dahası",
+    "payCard4Title": "Kripto",
+    "payCard4Desc": "BTC, ETH, USDT, LTC ve 50+ coin",
+    "step1Title": "Danışmanlık",
+    "step1Desc": "Gereksinimlerinizi, hedef pazarınızı, tercih edilen oyunları ve ödeme yöntemlerini konuşuyoruz.",
+    "step2Title": "Kurulum & Markalama",
+    "step2Desc": "Platformu logonuz, renkleriniz, alan adınız ve tercih ettiğiniz ayarlarla yapılandırıyoruz.",
+    "step3Title": "Entegrasyon",
+    "step3Desc": "Ödeme yöntemleri, oyunlar ve üçüncü taraf araçlar bağlanıp test ediliyor.",
+    "step4Title": "Yayına Geçiş",
+    "step4Desc": "Casinonuz sürekli teknik destek ve hesap yönetimiyle yayına alınıyor."
   },
   "cryptoCasino": {
     "heroTitle": "Yerlesik Kripto Casino Platformu",
@@ -348,7 +387,11 @@
     "f11Title": "Yapilandirabilir Limitler",
     "f11Desc": "Coin bazinda minimum/maksimum yatirim ve cekim tutarlari belirleyin. Otomatik cekim esiklerini ve manuel inceleme tetikleyicilerini yapilandirin.",
     "f12Title": "Tam Backoffice",
-    "f12Desc": "White Label platformumuzla ayni guclu backoffice: oyuncu yonetimi, bonus motoru, risk araclari, raporlar ve affiliate sistemi."
+    "f12Desc": "White Label platformumuzla ayni guclu backoffice: oyuncu yonetimi, bonus motoru, risk araclari, raporlar ve affiliate sistemi.",
+    "heroBadge": "Kripto Casino",
+    "whyBadge": "Neden Kripto?",
+    "whyTitle": "Kripto Casinoların Avantajları",
+    "whyDesc": "Kripto para casinoları iGaming'de en hızlı büyüyen segmenttir. Daha düşük maliyetler, daha hızlı işlemler, küresel erişim ve geleneksel bankacılık altyapısına bağımlılık yok."
   },
   "curacaoLicense": {
     "heroTitle": "Curacao Oyun Lisansi",
@@ -400,7 +443,9 @@
     "sf5Title": "Uluslararasi Taninirlik",
     "sf5Desc": "Curacao oyun lisanslari uluslararasi alanda taninir ve buyuk odeme islemcileri, oyun saglayicilari ve affiliate aglari tarafindan kabul edilir.",
     "sf6Title": "Surekli Destek",
-    "sf6Desc": "Lisanslama sonrasi uyumluluk destegi, yillik yenileme yardimi, duzenleyici guncellemeler ve herhangi bir uyumluluk sorusu icin danismanlik."
+    "sf6Desc": "Lisanslama sonrasi uyumluluk destegi, yillik yenileme yardimi, duzenleyici guncellemeler ve herhangi bir uyumluluk sorusu icin danismanlik.",
+    "licenseTypesBadge": "Lisans Türleri",
+    "licenseTypesSubtitle": "İş modelinize ve büyüme planlarınıza en uygun lisans türünü seçin."
   },
   "anjouanLicense": {
     "heroTitle": "Anjouan Oyun Lisansi",
@@ -479,7 +524,23 @@
     "sf5Title": "Artan Kabul",
     "sf5Desc": "Anjouan lisanslari dunya genelinde oyun saglayicilari, odeme islemcileri ve affiliate aglari arasinda hizla kabul gormeye basliyor.",
     "sf6Title": "Uygun Maliyet",
-    "sf6Desc": "Rekabetci kurulum ucretleri ve yillik yenileme maliyetleri, Anjouan'u iGaming lisanslamasi icin en uygun maliyetli yetki bolgelerinden biri yapiyor."
+    "sf6Desc": "Rekabetci kurulum ucretleri ve yillik yenileme maliyetleri, Anjouan'u iGaming lisanslamasi icin en uygun maliyetli yetki bolgelerinden biri yapiyor.",
+    "licenseTypesBadge": "Lisans Türleri",
+    "licenseTypesSubtitle": "Master lisansla tam özerklik veya alt lisansla hızlı başlangıç istiyorsanız, süreci baştan sona biz yönetiyoruz.",
+    "contactUs": "Bize ulaşın",
+    "anjouan4_6": "4-6 hafta",
+    "curacao6_8": "6-8 hafta",
+    "available": "Mevcut",
+    "availableGreen": "Mevcut (Green)",
+    "availableOrange": "Mevcut (Orange)",
+    "lower": "Düşük",
+    "moderate": "Orta",
+    "competitive": "Rekabetçi",
+    "standard": "Standart",
+    "growingRapidly": "Hızla büyüyor",
+    "wellEstablished": "Köklü",
+    "expanding": "Genişliyor",
+    "widelyRecognized": "Yaygın tanınmış"
   },
   "about": {
     "badge": "MATGAMING Hakkinda",
@@ -551,7 +612,8 @@
     "why5": "Hizli yanit sureleri ve uygulamali destek",
     "why6": "Sizinle birlikte olceklenen esnek ticari modeller",
     "why7": "Dunya genelinde operatorleri guclendiren kanitlanmis teknoloji",
-    "why8": "Birden fazla yetki bolgesinde duzenleyici uzmanlik"
+    "why8": "Birden fazla yetki bolgesinde duzenleyici uzmanlik",
+    "heroBadge": "MATGAMING Hakkında"
   },
   "blog": {
     "badge": "Blog ve Icerikler",
@@ -565,6 +627,7 @@
     "crypto": "Kripto",
     "allArticles": "Tum Makaleler",
     "readMore": "Devamini oku",
+    "heroBadge": "Blog & İçgörüler",
     "posts": [
       {
         "title": "2025'te Cevrimici Casino Nasil Baslatilir: Eksiksiz Rehber",

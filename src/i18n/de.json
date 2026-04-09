@@ -69,7 +69,7 @@
   ],
   "services": {
     "casinoAgg": "10.000+ Spiele von 200+ Anbietern über eine einzige API-Integration. Slots, Live-Casino, Tischspiele und mehr.",
-    "sportsbookAgg": "BetConstruct, Digitain & Betradar Sportwetten. Pre-Match, Live-Wetten, 50+ Sportarten, Tausende von Märkten.",
+    "sportsbookAgg": "Sportwetten-Feeds von BetConstruct, Digitain & Betradar. Pre-Match, Live-Wetten, 50+ Sportarten, Tausende von Märkten.",
     "whiteLabel": "Komplette Casino-Plattform mit Backoffice, Spielerverwaltung, Bonus-Engine, Zahlungen und Affiliate-System.",
     "cryptoCasino": "Vollausgestattete krypto-native Casino-Plattform. Bitcoin, Ethereum, USDT und 50+ Kryptowährungen unterstützt.",
     "curacaoLicense": "Orange- & Green-Gaming-Lizenzen. Beschleunigte Bearbeitung in 6–8 Wochen mit vollständiger rechtlicher und Compliance-Unterstützung.",
@@ -126,7 +126,18 @@
     "sendAnother": "Weitere Nachricht senden",
     "privacy": "Mit dem Absenden dieses Formulars stimmen Sie unserer Datenschutzrichtlinie zu. Wir geben Ihre Daten niemals an Dritte weiter.",
     "departments": "Die richtige <1>Abteilung</1> finden",
-    "departmentsSubtitle": "Erreichen Sie das Team, das Ihnen am besten helfen kann. Klicken Sie, um eine direkte E-Mail zu senden."
+    "departmentsSubtitle": "Erreichen Sie das Team, das Ihnen am besten helfen kann. Klicken Sie, um eine direkte E-Mail zu senden.",
+    "heroBadge": "Kontakt",
+    "heroTitle": "Bereit für ein ",
+    "heroTitleHighlight": "Gespräch?",
+    "heroSubtitle": "Füllen Sie das Formular aus und unser Team meldet sich innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot.",
+    "description": "Ob Sie ein neues Casino starten, in Sportwetten expandieren oder Hilfe bei der Lizenzierung benötigen — unsere Experten sind bereit.",
+    "emailLabel": "E-Mail",
+    "supportLabel": "Support",
+    "officesLabel": "Büros",
+    "responseTimeText": "Wir antworten in der Regel innerhalb von <1>24 Stunden</1>",
+    "departmentTitle": "Finden Sie die richtige <1>Abteilung</1>",
+    "departmentSubtitle": "Erreichen Sie das Team, das Ihnen am besten helfen kann."
   },
   "casinoAgg": {
     "heroTitle": "Die größte Casino-Inhaltsbibliothek",
@@ -170,11 +181,11 @@
     "integrationBadge": "Integration",
     "integrationTitle": "So funktioniert es",
     "step1Title": "Unsere API verbinden",
-    "step1Desc": "Integrieren Sie unsere RESTful API in Ihre Plattform. Umfassende Dokumentation, Sandbox-Umgebung und dedizierter technischer Support inklusive.",
-    "step2Title": "Ihre Lobby konfigurieren",
-    "step2Desc": "Wählen Sie, welche Anbieter und Spiele aktiviert werden sollen. Richten Sie Kategorien, empfohlene Spiele, Geo-Einschränkungen und Spielerpräferenzen ein.",
+    "step1Desc": "Integrieren Sie unsere RESTful API in Ihre Plattform. Umfassende Dokumentation, Sandbox-Umgebung und dedizierter technischer Support.",
+    "step2Title": "Lobby konfigurieren",
+    "step2Desc": "Wählen Sie Anbieter und Spiele. Kategorien, Featured Games, Geo-Einschränkungen und Spielerpräferenzen einrichten.",
     "step3Title": "Live gehen",
-    "step3Desc": "Starten Sie Ihre Spiellobby und beginnen Sie, Umsatz zu generieren. Wir kümmern uns im Hintergrund um die gesamte Anbieterkommunikation, Updates und Compliance.",
+    "step3Desc": "Starten Sie Ihre Spiellobby und generieren Sie Einnahmen. Wir kümmern uns um Provider-Kommunikation, Updates und Compliance.",
     "benefitTitle": "Eine Integration.\nUnbegrenzter Inhalt.",
     "benefitDesc": "Anstatt separate Verträge abzuschließen und individuelle Integrationen mit jedem Spieleanbieter zu erstellen, verbinden Sie sich einmal mit MATGAMING und erhalten sofortigen Zugang zum gesamten Ökosystem. Sparen Sie Monate an Entwicklungszeit und laufende Wartungskosten.",
     "b1": "Keine einzelnen Anbieterverträge",
@@ -182,7 +193,14 @@
     "b3": "Einheitliches Reporting-Dashboard",
     "b4": "Automatische neue Spielveröffentlichungen",
     "b5": "Konfiguration auf Anbieterebene",
-    "b6": "Dedizierter Account-Manager"
+    "b6": "Dedizierter Account-Manager",
+    "heroTitleHighlight": "Inhaltsbibliothek",
+    "s1Title": "Unsere API verbinden",
+    "s1Desc": "Integrieren Sie unsere RESTful API in Ihre Plattform. Umfassende Dokumentation, Sandbox-Umgebung und dedizierter technischer Support.",
+    "s2Title": "Lobby konfigurieren",
+    "s2Desc": "Wählen Sie Anbieter und Spiele. Kategorien, Featured Games, Geo-Einschränkungen und Spielerpräferenzen einrichten.",
+    "s3Title": "Live gehen",
+    "s3Desc": "Starten Sie Ihre Spiellobby und generieren Sie Einnahmen. Wir kümmern uns um Provider-Kommunikation, Updates und Compliance."
   },
   "sportsbookAgg": {
     "heroTitle": "Erstklassige Sportwetten",
@@ -299,7 +317,28 @@
     "ps3Title": "Integration",
     "ps3Desc": "Zahlungsmethoden, Spiele und alle Drittanbieter-Tools werden verbunden und getestet.",
     "ps4Title": "Live gehen",
-    "ps4Desc": "Ihr Casino geht mit laufendem technischem Support und Account-Management live."
+    "ps4Desc": "Ihr Casino geht mit laufendem technischem Support und Account-Management live.",
+    "includedBadge": "Alles in einem",
+    "includedSubtitle": "Unsere White Label Plattform ist eine vollständige, produktionsreife Casino-Lösung. Keine Entwicklung erforderlich — verbinden Sie einfach Ihre Domain und gehen Sie live.",
+    "paymentBadge": "Zahlungen",
+    "paymentTitle": "100+ Zahlungsmethoden",
+    "paymentDesc": "Akzeptieren Sie Einzahlungen und verarbeiten Sie Auszahlungen weltweit. Kreditkarten, Banküberweisungen, E-Wallets, Kryptowährung und lokale Zahlungsmethoden.",
+    "payCard1Title": "Karten & Banken",
+    "payCard1Desc": "Visa, Mastercard, Banküberweisungen",
+    "payCard2Title": "E-Wallets",
+    "payCard2Desc": "Skrill, Neteller, ecoPayz, MuchBetter",
+    "payCard3Title": "Lokale Methoden",
+    "payCard3Desc": "PIX, UPI, GCash, M-Pesa & mehr",
+    "payCard4Title": "Krypto",
+    "payCard4Desc": "BTC, ETH, USDT, LTC & 50+ Coins",
+    "step1Title": "Beratung",
+    "step1Desc": "Wir besprechen Ihre Anforderungen, Zielmarkt, bevorzugte Spiele und Zahlungsmethoden.",
+    "step2Title": "Einrichtung & Branding",
+    "step2Desc": "Wir konfigurieren die Plattform mit Ihrem Logo, Farben, Domain und bevorzugten Einstellungen.",
+    "step3Title": "Integration",
+    "step3Desc": "Zahlungsmethoden, Spiele und Drittanbieter-Tools werden verbunden und getestet.",
+    "step4Title": "Live gehen",
+    "step4Desc": "Ihr Casino geht mit laufendem technischen Support und Account-Management live."
   },
   "cryptoCasino": {
     "heroTitle": "Native Krypto-Casino-Plattform",
@@ -348,7 +387,11 @@
     "f11Title": "Konfigurierbare Limits",
     "f11Desc": "Legen Sie Mindest-/Höchstbeträge für Ein- und Auszahlungen pro Coin fest. Konfigurieren Sie automatische Auszahlungsschwellen und manuelle Prüfauslöser.",
     "f12Title": "Vollständiges Backoffice",
-    "f12Desc": "Dasselbe leistungsstarke Backoffice wie unsere White Label Plattform: Spielerverwaltung, Bonus-Engine, Risiko-Tools, Berichte und Affiliate-System."
+    "f12Desc": "Dasselbe leistungsstarke Backoffice wie unsere White Label Plattform: Spielerverwaltung, Bonus-Engine, Risiko-Tools, Berichte und Affiliate-System.",
+    "heroBadge": "Krypto Casino",
+    "whyBadge": "Warum Krypto?",
+    "whyTitle": "Die Vorteile von Krypto Casinos",
+    "whyDesc": "Kryptowährungs-Casinos sind das am schnellsten wachsende Segment im iGaming. Niedrigere Kosten, schnellere Transaktionen, globale Reichweite und keine Abhängigkeit von traditioneller Bankinfrastruktur."
   },
   "curacaoLicense": {
     "heroTitle": "Curacao Gaming-Lizenz",
@@ -400,7 +443,9 @@
     "sf5Title": "Internationale Anerkennung",
     "sf5Desc": "Curacao Gaming-Lizenzen sind international anerkannt und werden von großen Zahlungsdienstleistern, Spieleanbietern und Affiliate-Netzwerken akzeptiert.",
     "sf6Title": "Laufende Unterstützung",
-    "sf6Desc": "Compliance-Unterstützung nach der Lizenzierung, jährliche Verlängerungshilfe, regulatorische Updates und Beratung bei allen Compliance-Fragen."
+    "sf6Desc": "Compliance-Unterstützung nach der Lizenzierung, jährliche Verlängerungshilfe, regulatorische Updates und Beratung bei allen Compliance-Fragen.",
+    "licenseTypesBadge": "Lizenztypen",
+    "licenseTypesSubtitle": "Wählen Sie den Lizenztyp, der am besten zu Ihrem Geschäftsmodell passt."
   },
   "anjouanLicense": {
     "heroTitle": "Anjouan Gaming-Lizenz",
@@ -479,7 +524,23 @@
     "sf5Title": "Wachsende Akzeptanz",
     "sf5Desc": "Anjouan-Lizenzen gewinnen weltweit bei Spieleanbietern, Zahlungsdienstleistern und Affiliate-Netzwerken schnell an Akzeptanz.",
     "sf6Title": "Kosteneffizient",
-    "sf6Desc": "Wettbewerbsfähige Einrichtungsgebühren und jährliche Verlängerungskosten machen Anjouan zu einer der günstigsten Jurisdiktionen für iGaming-Lizenzierung."
+    "sf6Desc": "Wettbewerbsfähige Einrichtungsgebühren und jährliche Verlängerungskosten machen Anjouan zu einer der günstigsten Jurisdiktionen für iGaming-Lizenzierung.",
+    "licenseTypesBadge": "Lizenztypen",
+    "licenseTypesSubtitle": "Ob Master-Lizenz oder Sub-Lizenz — wir übernehmen den gesamten Prozess.",
+    "contactUs": "Kontaktieren Sie uns",
+    "anjouan4_6": "4-6 Wochen",
+    "curacao6_8": "6-8 Wochen",
+    "available": "Verfügbar",
+    "availableGreen": "Verfügbar (Green)",
+    "availableOrange": "Verfügbar (Orange)",
+    "lower": "Niedriger",
+    "moderate": "Mittel",
+    "competitive": "Wettbewerbsfähig",
+    "standard": "Standard",
+    "growingRapidly": "Wächst schnell",
+    "wellEstablished": "Gut etabliert",
+    "expanding": "Expandierend",
+    "widelyRecognized": "Weithin anerkannt"
   },
   "about": {
     "badge": "Über MATGAMING",
@@ -551,7 +612,8 @@
     "why5": "Schnelle Reaktionszeiten und praxisnaher Support",
     "why6": "Flexible Geschäftsmodelle, die mit Ihnen skalieren",
     "why7": "Bewährte Technologie, die Betreiber weltweit unterstützt",
-    "why8": "Regulatorische Expertise über mehrere Jurisdiktionen hinweg"
+    "why8": "Regulatorische Expertise über mehrere Jurisdiktionen hinweg",
+    "heroBadge": "Über MATGAMING"
   },
   "blog": {
     "badge": "Blog & Einblicke",
@@ -565,6 +627,7 @@
     "crypto": "Krypto",
     "allArticles": "Alle Artikel",
     "readMore": "Weiterlesen",
+    "heroBadge": "Blog & Einblicke",
     "posts": [
       {
         "title": "Wie man 2025 ein Online-Casino startet: Der komplette Leitfaden",

@@ -126,7 +126,18 @@
     "sendAnother": "Enviar otro mensaje",
     "privacy": "Al enviar este formulario, aceptas nuestra politica de privacidad. Nunca compartiremos tus datos con terceros.",
     "departments": "Encuentra el <1>Departamento</1> Adecuado",
-    "departmentsSubtitle": "Contacta al equipo que mejor puede ayudarte. Haz clic para enviar un correo directo."
+    "departmentsSubtitle": "Contacta al equipo que mejor puede ayudarte. Haz clic para enviar un correo directo.",
+    "heroBadge": "Contacto",
+    "heroTitle": "¿Listo para iniciar una ",
+    "heroTitleHighlight": "Conversación?",
+    "heroSubtitle": "Complete el formulario y nuestro equipo se pondrá en contacto en 24 horas con una propuesta personalizada.",
+    "description": "Ya sea que esté lanzando un casino, expandiéndose a apuestas deportivas o necesite ayuda con licencias — nuestros expertos están listos.",
+    "emailLabel": "Correo",
+    "supportLabel": "Soporte",
+    "officesLabel": "Oficinas",
+    "responseTimeText": "Normalmente respondemos en <1>24 horas</1>",
+    "departmentTitle": "Encuentre el <1>Departamento</1> correcto",
+    "departmentSubtitle": "Contacte al equipo que mejor puede ayudarle."
   },
   "casinoAgg": {
     "heroTitle": "La Mayor Biblioteca de Contenido de Casino",
@@ -182,7 +193,14 @@
     "b3": "Panel de reportes unificado",
     "b4": "Lanzamientos automaticos de nuevos juegos",
     "b5": "Configuracion a nivel de proveedor",
-    "b6": "Gerente de cuenta dedicado"
+    "b6": "Gerente de cuenta dedicado",
+    "heroTitleHighlight": "Biblioteca de Contenido",
+    "s1Title": "Conectar Nuestra API",
+    "s1Desc": "Integre nuestra API RESTful en su plataforma. Documentación completa, entorno sandbox y soporte técnico dedicado.",
+    "s2Title": "Configurar su Lobby",
+    "s2Desc": "Elija proveedores y juegos. Configure categorías, juegos destacados, restricciones geográficas y preferencias.",
+    "s3Title": "Lanzar",
+    "s3Desc": "Lance su lobby de juegos y comience a generar ingresos. Nos encargamos de la comunicación con proveedores, actualizaciones y cumplimiento."
   },
   "sportsbookAgg": {
     "heroTitle": "Apuestas Deportivas de Clase Mundial",
@@ -299,7 +317,28 @@
     "ps3Title": "Integracion",
     "ps3Desc": "Se conectan y prueban los metodos de pago, juegos y cualquier herramienta de terceros.",
     "ps4Title": "Lanzamiento",
-    "ps4Desc": "Tu casino sale en vivo con soporte tecnico continuo y gestion de cuenta."
+    "ps4Desc": "Tu casino sale en vivo con soporte tecnico continuo y gestion de cuenta.",
+    "includedBadge": "Todo en Uno",
+    "includedSubtitle": "Nuestra plataforma White Label es una solución de casino completa y lista para producción. No requiere desarrollo — solo conecta tu dominio y lanza.",
+    "paymentBadge": "Pagos",
+    "paymentTitle": "100+ Métodos de Pago",
+    "paymentDesc": "Acepta depósitos y procesa retiros a nivel mundial. Tarjetas de crédito, transferencias bancarias, billeteras electrónicas, criptomonedas y métodos de pago locales.",
+    "payCard1Title": "Tarjetas & Bancos",
+    "payCard1Desc": "Visa, Mastercard, transferencias bancarias",
+    "payCard2Title": "Billeteras Electrónicas",
+    "payCard2Desc": "Skrill, Neteller, ecoPayz, MuchBetter",
+    "payCard3Title": "Métodos Locales",
+    "payCard3Desc": "PIX, UPI, GCash, M-Pesa y más",
+    "payCard4Title": "Cripto",
+    "payCard4Desc": "BTC, ETH, USDT, LTC y 50+ monedas",
+    "step1Title": "Consulta",
+    "step1Desc": "Discutimos sus requisitos, mercado objetivo, juegos preferidos y métodos de pago.",
+    "step2Title": "Configuración & Branding",
+    "step2Desc": "Configuramos la plataforma con su logo, colores, dominio y ajustes preferidos.",
+    "step3Title": "Integración",
+    "step3Desc": "Los métodos de pago, juegos y herramientas de terceros se conectan y prueban.",
+    "step4Title": "Lanzamiento",
+    "step4Desc": "Su casino se lanza con soporte técnico continuo y gestión de cuentas."
   },
   "cryptoCasino": {
     "heroTitle": "Plataforma de Casino Cripto Nativa",
@@ -348,7 +387,11 @@
     "f11Title": "Limites Configurables",
     "f11Desc": "Establece montos minimos/maximos de deposito y retiro por moneda. Configura umbrales de retiro automatico y activadores de revision manual.",
     "f12Title": "Backoffice Completo",
-    "f12Desc": "El mismo potente backoffice de nuestra plataforma White Label: gestion de jugadores, motor de bonos, herramientas de riesgo, reportes y sistema de afiliados."
+    "f12Desc": "El mismo potente backoffice de nuestra plataforma White Label: gestion de jugadores, motor de bonos, herramientas de riesgo, reportes y sistema de afiliados.",
+    "heroBadge": "Casino Cripto",
+    "whyBadge": "¿Por qué Cripto?",
+    "whyTitle": "Las Ventajas de los Casinos Cripto",
+    "whyDesc": "Los casinos de criptomonedas son el segmento de más rápido crecimiento en iGaming. Costos más bajos, transacciones más rápidas, alcance global y sin dependencia de la infraestructura bancaria tradicional."
   },
   "curacaoLicense": {
     "heroTitle": "Licencia de Juego de Curacao",
@@ -400,7 +443,9 @@
     "sf5Title": "Reconocimiento Internacional",
     "sf5Desc": "Las licencias de juego de Curacao son reconocidas internacionalmente y aceptadas por los principales procesadores de pago, proveedores de juegos y redes de afiliados.",
     "sf6Title": "Soporte Continuo",
-    "sf6Desc": "Soporte de cumplimiento post-licenciamiento, asistencia en renovacion anual, actualizaciones regulatorias y consultoria para cualquier duda de cumplimiento."
+    "sf6Desc": "Soporte de cumplimiento post-licenciamiento, asistencia en renovacion anual, actualizaciones regulatorias y consultoria para cualquier duda de cumplimiento.",
+    "licenseTypesBadge": "Tipos de Licencia",
+    "licenseTypesSubtitle": "Elija el tipo de licencia que mejor se adapte a su modelo de negocio."
   },
   "anjouanLicense": {
     "heroTitle": "Licencia de Juego de Anjouan",
@@ -479,7 +524,23 @@
     "sf5Title": "Aceptacion Creciente",
     "sf5Desc": "Las licencias de Anjouan estan ganando aceptacion rapidamente entre proveedores de juegos, procesadores de pago y redes de afiliados en todo el mundo.",
     "sf6Title": "Rentable",
-    "sf6Desc": "Tarifas de configuracion competitivas y costos de renovacion anual hacen de Anjouan una de las jurisdicciones mas economicas para el licenciamiento de iGaming."
+    "sf6Desc": "Tarifas de configuracion competitivas y costos de renovacion anual hacen de Anjouan una de las jurisdicciones mas economicas para el licenciamiento de iGaming.",
+    "licenseTypesBadge": "Tipos de Licencia",
+    "licenseTypesSubtitle": "Ya sea licencia maestra o sublicencia — gestionamos todo el proceso.",
+    "contactUs": "Contáctenos",
+    "anjouan4_6": "4-6 semanas",
+    "curacao6_8": "6-8 semanas",
+    "available": "Disponible",
+    "availableGreen": "Disponible (Green)",
+    "availableOrange": "Disponible (Orange)",
+    "lower": "Menor",
+    "moderate": "Moderado",
+    "competitive": "Competitivo",
+    "standard": "Estándar",
+    "growingRapidly": "Creciendo rápidamente",
+    "wellEstablished": "Bien establecido",
+    "expanding": "En expansión",
+    "widelyRecognized": "Ampliamente reconocido"
   },
   "about": {
     "badge": "Sobre MATGAMING",
@@ -551,7 +612,8 @@
     "why5": "Tiempos de respuesta rapidos y soporte personalizado",
     "why6": "Modelos comerciales flexibles que escalan contigo",
     "why7": "Tecnologia probada que impulsa operadores a nivel global",
-    "why8": "Experiencia regulatoria en multiples jurisdicciones"
+    "why8": "Experiencia regulatoria en multiples jurisdicciones",
+    "heroBadge": "Sobre MATGAMING"
   },
   "blog": {
     "badge": "Blog y Novedades",
@@ -565,6 +627,7 @@
     "crypto": "Cripto",
     "allArticles": "Todos los Articulos",
     "readMore": "Leer mas",
+    "heroBadge": "Blog & Perspectivas",
     "posts": [
       {
         "title": "Como Lanzar un Casino en Linea en 2025: La Guia Completa",
