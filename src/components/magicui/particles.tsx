@@ -16,7 +16,7 @@ export function Particles({
   quantity = 50,
   staticity = 50,
   ease = 50,
-  color = "#ea580c",
+  color = "#2d6a4f",
   size = 0.4,
 }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)

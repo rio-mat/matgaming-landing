@@ -15,12 +15,12 @@ import { BlurFade } from '../components/magicui/blur-fade'
 import { AnimatedShinyText } from '../components/magicui/animated-shiny-text'
 
 const servicesMeta = [
-  { icon: Gamepad2, key: 'casinoAgg', titleKey: 'nav.casinoAggregator', href: '/casino-aggregator', color: 'from-orange-500 to-amber-500' },
+  { icon: Gamepad2, key: 'casinoAgg', titleKey: 'nav.casinoAggregator', href: '/casino-aggregator', color: 'from-emerald-600 to-green-500' },
   { icon: Trophy, key: 'sportsbookAgg', titleKey: 'nav.sportsbookAggregator', href: '/sportsbook-aggregator', color: 'from-emerald-500 to-teal-500' },
   { icon: Layers, key: 'whiteLabel', titleKey: 'nav.whiteLabel', href: '/white-label', color: 'from-blue-500 to-cyan-500' },
-  { icon: Bitcoin, key: 'cryptoCasino', titleKey: 'nav.cryptoCasino', href: '/crypto-casino', color: 'from-yellow-500 to-orange-500' },
+  { icon: Bitcoin, key: 'cryptoCasino', titleKey: 'nav.cryptoCasino', href: '/crypto-casino', color: 'from-yellow-500 to-green-500' },
   { icon: ScrollText, key: 'curacaoLicense', titleKey: 'nav.curacaoLicense', href: '/curacao-license', color: 'from-sky-500 to-blue-500' },
-  { icon: Shield, key: 'anjouanLicense', titleKey: 'nav.anjouanLicense', href: '/anjouan-license', color: 'from-red-500 to-orange-500' },
+  { icon: Shield, key: 'anjouanLicense', titleKey: 'nav.anjouanLicense', href: '/anjouan-license', color: 'from-teal-500 to-emerald-500' },
 ]
 
 const bannerHrefs = ['/casino-aggregator', '/sportsbook-aggregator', '/white-label', '/crypto-casino', '/curacao-license', '/anjouan-license']
@@ -61,11 +61,11 @@ function HeroBanner() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Particles background */}
-      <Particles className="absolute inset-0 z-0" quantity={40} color="#ea580c" size={0.5} />
+      <Particles className="absolute inset-0 z-0" quantity={40} color="#2d6a4f" size={0.5} />
 
       <div className="absolute inset-0 z-[1]">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-500/8 rounded-full blur-[180px]" />
-        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[140px]" />
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-500/8 rounded-full blur-[180px]" />
+        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[140px]" />
       </div>
       <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--color-surface)_70%)]" />
 
@@ -96,10 +96,10 @@ function HeroBanner() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to={bannerHrefs[current]}>
                 <ShimmerButton
-                  shimmerColor="#f97316"
-                  background="rgba(234,88,12,1)"
+                  shimmerColor="#95d5b2"
+                  background="rgba(45,106,79,1)"
                   borderRadius="12px"
-                  className="px-8 py-4 shadow-[0_0_30px_rgba(234,88,12,0.3)]"
+                  className="px-8 py-4 shadow-[0_0_30px_rgba(45,106,79,0.3)]"
                 >
                   {b.cta} <ArrowRight size={18} />
                 </ShimmerButton>

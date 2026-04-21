@@ -86,7 +86,7 @@ export function PageHero({ badge, title, subtitle, cta, ctaHref = '/contact' }: 
         </motion.p>
         {cta && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-            <Link to={ctaHref} className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_30px_rgba(234,88,12,0.3)] hover:shadow-[0_0_50px_rgba(234,88,12,0.4)]">
+            <Link to={ctaHref} className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_30px_rgba(45,106,79,0.3)] hover:shadow-[0_0_50px_rgba(45,106,79,0.4)]">
               {cta} <ArrowRight size={18} />
             </Link>
           </motion.div>
@@ -106,7 +106,7 @@ export function FeatureGrid({ features }: { features: { icon: React.ElementType;
           </div>
           <h3 className="font-display text-lg font-semibold text-white mb-2">{f.title}</h3>
           <p className="text-sm text-slate-400 leading-relaxed">{f.desc}</p>
-          <BorderBeam size={120} duration={15} colorFrom="#ea580c" colorTo="#f59e0b" />
+          <BorderBeam size={120} duration={15} colorFrom="#2d6a4f" colorTo="#95d5b2" />
         </motion.div>
       ))}
     </motion.div>
@@ -154,7 +154,7 @@ export function CTABanner() {
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{t('cta.subtitle')}</p>
           <Link to="/contact">
             <ShimmerButton
-              shimmerColor="#ea580c"
+              shimmerColor="#2d6a4f"
               background="rgba(255,255,255,1)"
               borderRadius="12px"
               className="px-8 py-4 mx-auto"

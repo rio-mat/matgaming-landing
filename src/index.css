@@ -3,16 +3,16 @@
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --color-brand: #ea580c;
-  --color-brand-light: #f97316;
-  --color-brand-dark: #c2410c;
-  --color-accent: #f59e0b;
-  --color-accent-light: #fbbf24;
-  --color-surface: #0a1628;
-  --color-surface-2: #0f1f3a;
-  --color-surface-3: #162a4a;
-  --color-border: #1c3054;
-  --color-border-light: #264170;
+  --color-brand: #2d6a4f;
+  --color-brand-light: #40916c;
+  --color-brand-dark: #1b4332;
+  --color-accent: #95d5b2;
+  --color-accent-light: #b7e4c7;
+  --color-surface: #0b1f13;
+  --color-surface-2: #122a1a;
+  --color-surface-3: #1a3a25;
+  --color-border: #1e4430;
+  --color-border-light: #2d6a4f;
 }
 
 html {
@@ -22,12 +22,12 @@ html {
 body {
   margin: 0;
   background: var(--color-surface);
-  color: #8b9dc3;
+  color: #a3c4b0;
   font-family: var(--font-sans);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #f97316, #eab308);
+  background: linear-gradient(135deg, #40916c, #95d5b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -43,7 +43,7 @@ body {
 .card:hover {
   border-color: var(--color-border-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(234, 88, 12, 0.08);
+  box-shadow: 0 8px 32px rgba(45, 106, 79, 0.1);
 }
 
 .provider-logo {
