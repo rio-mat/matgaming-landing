@@ -79,6 +79,12 @@ export default function Footer() {
               </div>
             ))}
           </div>
+          {/* CGA License Seal */}
+          <div className="flex justify-center mt-6">
+            <a href="https://cert.cga.mba/certificate?id=eyJpdiI6IjY1M2MzOWEyY2IyMzAxN2NhMTk0MTNjNDRiNjgzNzI5ZjM2NjM3MzMwNGE3YjhhMzQyMWUwNWFlNTdmYTJlNTgiLCJ2YWx1ZSI6IjY3ZmRkY2E1ZGEwN2VjNjYzYzgxYmQxZmE1MmI4MzRjY2Q5MzQwZWU5ZjU2NDRkMGNlZTdmODg4NDc1NWMxMGNmZGU0MmEzZTlhZGU0NzRjMzJkOGRiNjZlZTA2MzlkZTY2MDU0NTU2Yzg0NDBmOTlmMjU2ZGM2ZWNmYjZiNWRmIiwibWFjIjoiNmNkNTU5MDU1M2Y2OWZhY2MxOTk5YWVjYTUzMGQ0MzMxZThlYzI1YWE5NDE4NDEzYWIwZGZhNTBjZTliM2YwNDM5YzNmNTg5NjAxMzI0YjMxZTg1ZDNmNjQxNGViMzQxIiwidGFnIjoiIn0" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+              <img src="https://cert.cga.mba/assets/img/cga-seal-blue.svg" alt="CGA B2B License" width="120" height="60" />
+            </a>
+          </div>
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
