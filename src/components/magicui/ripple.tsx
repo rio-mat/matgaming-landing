@@ -26,7 +26,7 @@ export function Ripple({
         return (
           <div
             key={i}
-            className="absolute animate-ripple rounded-full border bg-emerald-400/25"
+            className="absolute animate-ripple rounded-full border bg-white/10"
             style={{
               width: `${circleSize}px`,
               height: `${circleSize}px`,
@@ -34,7 +34,7 @@ export function Ripple({
               animationDelay: animDelay,
               borderStyle,
               borderWidth: "1px",
-              borderColor: `rgba(45, 106, 79, ${borderOpacity / 100})`,
+              borderColor: `rgba(233, 69, 96, ${borderOpacity / 100})`,
               top: "50%",
               left: "50%",
               translate: "-50% -50%",

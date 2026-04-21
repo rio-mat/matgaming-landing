@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --color-brand: #2d6a4f;
-  --color-brand-light: #40916c;
-  --color-brand-dark: #1b4332;
-  --color-accent: #95d5b2;
-  --color-accent-light: #b7e4c7;
-  --color-surface: #0b1f13;
-  --color-surface-2: #122a1a;
-  --color-surface-3: #1a3a25;
-  --color-border: #1e4430;
-  --color-border-light: #2d6a4f;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Sora', system-ui, sans-serif;
+  --color-brand: #1a1a2e;
+  --color-brand-light: #16213e;
+  --color-brand-dark: #0f0f23;
+  --color-accent: #e94560;
+  --color-accent-light: #ff6b81;
+  --color-surface: #ffffff;
+  --color-surface-2: #f8f9fc;
+  --color-surface-3: #eef0f5;
+  --color-border: #e2e5ed;
+  --color-border-light: #c8cdd8;
 }
 
 html {
@@ -22,19 +22,24 @@ html {
 body {
   margin: 0;
   background: var(--color-surface);
-  color: #a3c4b0;
+  color: #4a5068;
   font-family: var(--font-sans);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #40916c, #95d5b2);
+  background: linear-gradient(135deg, #e94560, #ff6b81);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+.dark-section {
+  background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+  color: #c8cdd8;
+}
+
 .card {
-  background: var(--color-surface-2);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 16px;
   transition: all 0.3s;
@@ -43,7 +48,20 @@ body {
 .card:hover {
   border-color: var(--color-border-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(45, 106, 79, 0.1);
+  box-shadow: 0 12px 40px rgba(26, 26, 46, 0.08);
+}
+
+.card-dark {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.card-dark:hover {
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(233, 69, 96, 0.08);
 }
 
 .provider-logo {
@@ -66,61 +84,33 @@ body {
   to { transform: translateY(calc(-100% - var(--gap))); }
 }
 
-.animate-marquee {
-  animation: marquee var(--duration) linear infinite;
-}
-
-.animate-marquee-vertical {
-  animation: marquee-vertical var(--duration) linear infinite;
-}
-
-.direction-reverse {
-  animation-direction: reverse;
-}
+.animate-marquee { animation: marquee var(--duration) linear infinite; }
+.animate-marquee-vertical { animation: marquee-vertical var(--duration) linear infinite; }
+.direction-reverse { animation-direction: reverse; }
 
 @keyframes shimmer-slide {
   to { transform: translate(calc(100cqw - 100%), 0); }
 }
-
-.animate-shimmer-slide {
-  animation: shimmer-slide var(--speed) ease-in-out infinite alternate;
-}
+.animate-shimmer-slide { animation: shimmer-slide var(--speed) ease-in-out infinite alternate; }
 
 @keyframes shiny-text {
   0%, 90%, 100% { background-position: calc(-100% - var(--shimmer-width)) 0; }
   30%, 60% { background-position: calc(100% + var(--shimmer-width)) 0; }
 }
+.animate-shiny-text { animation: shiny-text 8s infinite; --shimmer-width: 80px; }
 
-.animate-shiny-text {
-  animation: shiny-text 8s infinite;
-  --shimmer-width: 80px;
-}
-
-@keyframes border-beam {
-  100% { offset-distance: 100%; }
-}
-
-.animate-border-beam {
-  animation: border-beam var(--duration) infinite linear;
-}
+@keyframes border-beam { 100% { offset-distance: 100%; } }
+.animate-border-beam { animation: border-beam var(--duration) infinite linear; }
 
 @keyframes ripple {
   0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
   100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
 }
+.animate-ripple { animation: ripple 3.5s infinite ease-out; }
 
-.animate-ripple {
-  animation: ripple 3.5s infinite ease-out;
-}
-
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
-  .animate-marquee-vertical,
-  .animate-shimmer-slide,
-  .animate-shiny-text,
-  .animate-border-beam,
-  .animate-ripple {
+  .animate-marquee, .animate-marquee-vertical, .animate-shimmer-slide,
+  .animate-shiny-text, .animate-border-beam, .animate-ripple {
     animation: none !important;
   }
 }

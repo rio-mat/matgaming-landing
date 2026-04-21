@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Gamepad2, Trophy, Layers, Bitcoin, ScrollText, Shield, ArrowRight, ChevronRight, ChevronLeft } from 'lucide-react'
+import { Gamepad2, Trophy, Layers, Bitcoin, ScrollText, Shield, ArrowRight, ChevronRight, ChevronLeft, Zap, Globe, Headphones, RefreshCw } from 'lucide-react'
 import { Section, SectionHeader, CTABanner } from '../components/common'
 import { casinoProviders } from '../data/providers'
 import { useState, useEffect, useCallback } from 'react'
@@ -10,20 +10,28 @@ import { Marquee } from '../components/magicui/marquee'
 import { NumberTicker } from '../components/magicui/number-ticker'
 import { ShimmerButton } from '../components/magicui/shimmer-button'
 import { BorderBeam } from '../components/magicui/border-beam'
-import { Particles } from '../components/magicui/particles'
 import { BlurFade } from '../components/magicui/blur-fade'
-import { AnimatedShinyText } from '../components/magicui/animated-shiny-text'
 
 const servicesMeta = [
-  { icon: Gamepad2, key: 'casinoAgg', titleKey: 'nav.casinoAggregator', href: '/casino-aggregator', color: 'from-emerald-600 to-green-500' },
-  { icon: Trophy, key: 'sportsbookAgg', titleKey: 'nav.sportsbookAggregator', href: '/sportsbook-aggregator', color: 'from-emerald-500 to-teal-500' },
-  { icon: Layers, key: 'whiteLabel', titleKey: 'nav.whiteLabel', href: '/white-label', color: 'from-blue-500 to-cyan-500' },
-  { icon: Bitcoin, key: 'cryptoCasino', titleKey: 'nav.cryptoCasino', href: '/crypto-casino', color: 'from-yellow-500 to-green-500' },
-  { icon: ScrollText, key: 'curacaoLicense', titleKey: 'nav.curacaoLicense', href: '/curacao-license', color: 'from-sky-500 to-blue-500' },
-  { icon: Shield, key: 'anjouanLicense', titleKey: 'nav.anjouanLicense', href: '/anjouan-license', color: 'from-teal-500 to-emerald-500' },
+  { icon: Gamepad2, key: 'casinoAgg', titleKey: 'nav.casinoAggregator', href: '/casino-aggregator', color: 'from-rose-500 to-pink-500' },
+  { icon: Trophy, key: 'sportsbookAgg', titleKey: 'nav.sportsbookAggregator', href: '/sportsbook-aggregator', color: 'from-violet-500 to-purple-500' },
+  { icon: Layers, key: 'whiteLabel', titleKey: 'nav.whiteLabel', href: '/white-label', color: 'from-blue-500 to-indigo-500' },
+  { icon: Bitcoin, key: 'cryptoCasino', titleKey: 'nav.cryptoCasino', href: '/crypto-casino', color: 'from-amber-500 to-orange-500' },
+  { icon: ScrollText, key: 'curacaoLicense', titleKey: 'nav.curacaoLicense', href: '/curacao-license', color: 'from-teal-500 to-cyan-500' },
+  { icon: Shield, key: 'anjouanLicense', titleKey: 'nav.anjouanLicense', href: '/anjouan-license', color: 'from-slate-600 to-slate-500' },
 ]
 
 const bannerHrefs = ['/casino-aggregator', '/sportsbook-aggregator', '/white-label', '/crypto-casino', '/curacao-license', '/anjouan-license']
+
+// DST Gaming style casino images
+const heroImages = [
+  'https://dstgaming.com/wp-content/uploads/2024/09/01-product-aggregator.png',
+  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-white-label-qvc4s528ogxb4v3exn4pcl3ryq5bvf4q1wkjzmmo8k.webp',
+  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-turnkey-qvc4vgfqsfgq3ca0kkqbn8zbensy0zamubf7xrpoac.webp',
+  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-crypto-qvc4vyanrwyvqeu98fxoxnc7ref4q1c0rmvpcpymue.webp',
+  'https://dstgaming.com/wp-content/uploads/2024/09/03-product-development.png',
+  'https://dstgaming.com/wp-content/uploads/2024/09/04-product-gamification.png',
+]
 
 function HeroBanner() {
   const { t } = useTranslation()
@@ -53,23 +61,21 @@ function HeroBanner() {
 
   const b = banners[current]
   const variants = {
-    enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
+    enter: (dir: number) => ({ x: dir > 0 ? 80 : -80, opacity: 0 }),
     center: { x: 0, opacity: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? -60 : 60, opacity: 0 }),
+    exit: (dir: number) => ({ x: dir > 0 ? -80 : 80, opacity: 0 }),
   }
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Particles background */}
-      <Particles className="absolute inset-0 z-0" quantity={40} color="#2d6a4f" size={0.5} />
-
-      <div className="absolute inset-0 z-[1]">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-500/8 rounded-full blur-[180px]" />
-        <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[140px]" />
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden dark-section">
+      {/* Decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[200px]" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[180px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-500/3 rounded-full blur-[150px]" />
       </div>
-      <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--color-surface)_70%)]" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-28">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={current}
@@ -79,55 +85,100 @@ function HeroBanner() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className="grid lg:grid-cols-2 gap-12 items-center"
           >
-            <span className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-5 py-2 text-sm font-medium mb-8">
-              <span className="w-2 h-2 bg-brand rounded-full animate-pulse" />
-              <AnimatedShinyText className="text-brand-light">{b.badge}</AnimatedShinyText>
-            </span>
+            {/* Text */}
+            <div>
+              <span className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-sm text-accent-light font-medium mb-6">
+                <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                {b.badge}
+              </span>
 
-            <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.05] mb-6 whitespace-pre-line">
-              {b.title}
-            </h1>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 whitespace-pre-line">
+                {b.title}
+              </h1>
 
-            <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-              {b.subtitle}
-            </p>
+              <p className="text-base md:text-lg text-slate-400 max-w-lg mb-8 leading-relaxed">
+                {b.subtitle}
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to={bannerHrefs[current]}>
-                <ShimmerButton
-                  shimmerColor="#95d5b2"
-                  background="rgba(45,106,79,1)"
-                  borderRadius="12px"
-                  className="px-8 py-4 shadow-[0_0_30px_rgba(45,106,79,0.3)]"
-                >
-                  {b.cta} <ArrowRight size={18} />
-                </ShimmerButton>
-              </Link>
-              <Link to="/contact" className="border border-border hover:border-border-light text-white px-8 py-4 rounded-xl font-semibold transition inline-flex items-center justify-center">
-                {t('home.getQuote')}
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to={bannerHrefs[current]}>
+                  <ShimmerButton
+                    shimmerColor="#ff6b81"
+                    background="rgba(233,69,96,1)"
+                    borderRadius="12px"
+                    className="px-8 py-4 shadow-[0_0_30px_rgba(233,69,96,0.25)]"
+                  >
+                    {b.cta} <ArrowRight size={18} />
+                  </ShimmerButton>
+                </Link>
+                <Link to="/contact" className="border border-white/15 hover:border-white/30 text-white px-8 py-4 rounded-xl font-semibold transition inline-flex items-center justify-center hover:bg-white/5">
+                  {t('home.getQuote')}
+                </Link>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="hidden lg:flex justify-center">
+              <motion.img
+                src={heroImages[current]}
+                alt=""
+                className="max-h-[420px] w-auto object-contain drop-shadow-2xl"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              />
             </div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="flex items-center justify-center gap-6 mt-14">
-          <button onClick={prev} className="w-10 h-10 rounded-full border border-border hover:border-brand/50 hover:bg-brand/5 flex items-center justify-center text-slate-400 hover:text-white transition">
+        {/* Nav dots */}
+        <div className="flex items-center justify-center lg:justify-start gap-6 mt-14 pb-8">
+          <button onClick={prev} className="w-10 h-10 rounded-full border border-white/15 hover:border-accent/50 hover:bg-accent/5 flex items-center justify-center text-slate-400 hover:text-white transition">
             <ChevronLeft size={18} />
           </button>
           <div className="flex items-center gap-2">
             {banners.map((_, i) => (
               <button key={i} onClick={() => goTo(i)} className="group relative h-2 transition-all duration-300 rounded-full overflow-hidden" style={{ width: i === current ? 32 : 8 }}>
-                <div className={`absolute inset-0 rounded-full transition-all duration-300 ${i === current ? 'bg-brand' : 'bg-slate-700 group-hover:bg-slate-500'}`} />
+                <div className={`absolute inset-0 rounded-full transition-all duration-300 ${i === current ? 'bg-accent' : 'bg-white/20 group-hover:bg-white/40'}`} />
               </button>
             ))}
           </div>
-          <button onClick={next} className="w-10 h-10 rounded-full border border-border hover:border-brand/50 hover:bg-brand/5 flex items-center justify-center text-slate-400 hover:text-white transition">
+          <button onClick={next} className="w-10 h-10 rounded-full border border-white/15 hover:border-accent/50 hover:bg-accent/5 flex items-center justify-center text-slate-400 hover:text-white transition">
             <ChevronRight size={18} />
           </button>
         </div>
       </div>
     </section>
+  )
+}
+
+function WhyUs() {
+  const features = [
+    { icon: Zap, title: 'Single API', desc: 'One integration for all providers' },
+    { icon: Globe, title: 'Multi-Market', desc: 'Languages, currencies, regulations' },
+    { icon: Headphones, title: '24/7 Support', desc: 'Dedicated account management' },
+    { icon: RefreshCw, title: 'Live Updates', desc: 'New games added continuously' },
+  ]
+  return (
+    <Section className="!py-14">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {features.map((f, i) => (
+          <BlurFade key={f.title} delay={i * 0.08}>
+            <div className="flex items-center gap-3 p-4">
+              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                <f.icon size={20} className="text-accent" />
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-brand">{f.title}</div>
+                <div className="text-xs text-slate-500">{f.desc}</div>
+              </div>
+            </div>
+          </BlurFade>
+        ))}
+      </div>
+    </Section>
   )
 }
 
@@ -143,17 +194,47 @@ function ServiceCards() {
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} mb-5`}>
                 <svc.icon size={24} className="text-white" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-white mb-3 group-hover:text-brand-light transition">{t(svc.titleKey)}</h3>
-              <p className="text-sm text-slate-400 leading-relaxed mb-4">{t(`services.${svc.key}`)}</p>
-              <span className="inline-flex items-center gap-1 text-sm text-brand-light font-medium group-hover:gap-2 transition-all">
+              <h3 className="font-display text-xl font-semibold text-brand mb-3 group-hover:text-accent transition">{t(svc.titleKey)}</h3>
+              <p className="text-sm text-slate-500 leading-relaxed mb-4">{t(`services.${svc.key}`)}</p>
+              <span className="inline-flex items-center gap-1 text-sm text-accent font-medium group-hover:gap-2 transition-all">
                 {t('home.learnMore')} <ArrowRight size={14} />
               </span>
-              <BorderBeam size={180} duration={12} delay={i * 2} />
+              <BorderBeam size={180} duration={12} delay={i * 2} colorFrom="#e94560" colorTo="#ff6b81" />
             </Link>
           </BlurFade>
         ))}
       </div>
     </Section>
+  )
+}
+
+function GameShowcase() {
+  const gameImages = [
+    { src: 'https://dstgaming.com/wp-content/uploads/2024/09/01-product-aggregator.png', title: 'Casino Aggregator' },
+    { src: 'https://dstgaming.com/wp-content/uploads/2024/09/02-product-payment.png', title: 'Payment Solutions' },
+    { src: 'https://dstgaming.com/wp-content/uploads/2024/09/03-product-development.png', title: 'Platform Development' },
+    { src: 'https://dstgaming.com/wp-content/uploads/2024/09/04-product-gamification.png', title: 'Gamification' },
+  ]
+  return (
+    <div className="dark-section py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <span className="inline-block bg-white/5 border border-white/10 rounded-full px-4 py-1 text-sm text-accent-light mb-4">Products</span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4">Our Product Suite</h2>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Everything you need to build and operate a successful iGaming business.</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {gameImages.map((img, i) => (
+            <BlurFade key={i} delay={i * 0.1}>
+              <div className="card-dark p-5 text-center group">
+                <img src={img.src} alt={img.title} className="w-full h-40 object-contain mb-4 group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <h3 className="text-sm font-semibold text-white">{img.title}</h3>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -164,8 +245,8 @@ function LogoMarquee() {
     <Section>
       <SectionHeader i18nKey="home.trustedProviders" subtitle={t('home.trustedSubtitle')} />
       <div className="relative">
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
         <Marquee pauseOnHover className="[--duration:50s] [--gap:0.75rem]">
           {logos.map((p) => (
             <div key={p.name} className="flex items-center gap-2.5 h-12 bg-surface-2 border border-border rounded-xl px-4 shrink-0">
@@ -190,40 +271,32 @@ function LogoMarquee() {
 function Stats() {
   const { t } = useTranslation()
   return (
-    <Section>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <BlurFade delay={0}>
-          <div className="text-center p-8 card">
-            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">
-              <NumberTicker value={10000} />+
+    <div className="dark-section py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: 10000, suffix: '+', label: t('home.casinoGames') },
+            { value: 200, suffix: '+', label: t('home.gameProviders') },
+            { value: 3, suffix: '', label: t('home.sportsbookPlatforms') },
+          ].map((s, i) => (
+            <BlurFade key={s.label} delay={i * 0.1}>
+              <div className="text-center">
+                <div className="font-display text-4xl md:text-5xl font-bold text-white mb-2">
+                  <NumberTicker value={s.value} />{s.suffix}
+                </div>
+                <div className="text-sm text-slate-400">{s.label}</div>
+              </div>
+            </BlurFade>
+          ))}
+          <BlurFade delay={0.3}>
+            <div className="text-center">
+              <div className="font-display text-4xl md:text-5xl font-bold text-white mb-2">4-8</div>
+              <div className="text-sm text-slate-400">{t('home.weeksToLaunch')}</div>
             </div>
-            <div className="text-sm text-slate-400">{t('home.casinoGames')}</div>
-          </div>
-        </BlurFade>
-        <BlurFade delay={0.1}>
-          <div className="text-center p-8 card">
-            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">
-              <NumberTicker value={200} />+
-            </div>
-            <div className="text-sm text-slate-400">{t('home.gameProviders')}</div>
-          </div>
-        </BlurFade>
-        <BlurFade delay={0.2}>
-          <div className="text-center p-8 card">
-            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">
-              <NumberTicker value={3} />
-            </div>
-            <div className="text-sm text-slate-400">{t('home.sportsbookPlatforms')}</div>
-          </div>
-        </BlurFade>
-        <BlurFade delay={0.3}>
-          <div className="text-center p-8 card">
-            <div className="font-display text-3xl md:text-5xl font-bold text-white mb-2">4-8</div>
-            <div className="text-sm text-slate-400">{t('home.weeksToLaunch')}</div>
-          </div>
-        </BlurFade>
+          </BlurFade>
+        </div>
       </div>
-    </Section>
+    </div>
   )
 }
 
@@ -232,7 +305,9 @@ export default function Home() {
     <>
       <SEO title="Home" description="MATGAMING — B2B iGaming technology provider. Casino aggregator, sportsbook aggregator, white label platform, crypto casino and fast-track iGaming licensing." path="/" />
       <HeroBanner />
+      <WhyUs />
       <ServiceCards />
+      <GameShowcase />
       <LogoMarquee />
       <Stats />
       <CTABanner />

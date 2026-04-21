@@ -44,11 +44,11 @@ export function SectionHeader({ badge, title, i18nKey, subtitle }: { badge?: str
   return (
     <motion.div className="text-center mb-16 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
       {badge && (
-        <span className="inline-block bg-brand/10 border border-brand/20 rounded-full px-4 py-1 text-sm text-brand-light mb-4 font-medium">
+        <span className="inline-block bg-accent/10 border border-accent/20 rounded-full px-4 py-1 text-sm text-accent mb-4 font-medium">
           {badge}
         </span>
       )}
-      <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+      <h2 className="font-display text-3xl md:text-5xl font-bold text-brand mb-4 leading-tight">
         {renderTitle()}
       </h2>
       {subtitle && <p className="text-slate-400 text-lg leading-relaxed">{subtitle}</p>}
@@ -60,7 +60,7 @@ export function PageHero({ badge, title, subtitle, cta, ctaHref = '/contact' }: 
   badge: string; title: ReactNode; subtitle: string; cta?: string; ctaHref?: string
 }) {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden dark-section">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-brand/8 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/6 rounded-full blur-[120px]" />
@@ -86,7 +86,7 @@ export function PageHero({ badge, title, subtitle, cta, ctaHref = '/contact' }: 
         </motion.p>
         {cta && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-            <Link to={ctaHref} className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_30px_rgba(45,106,79,0.3)] hover:shadow-[0_0_50px_rgba(45,106,79,0.4)]">
+            <Link to={ctaHref} className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_30px_rgba(233,69,96,0.3)] hover:shadow-[0_0_50px_rgba(233,69,96,0.4)]">
               {cta} <ArrowRight size={18} />
             </Link>
           </motion.div>
@@ -144,7 +144,7 @@ export function CTABanner() {
   return (
     <Section>
       <motion.div
-        className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-brand to-accent p-12 md:p-16 text-center"
+        className="relative rounded-3xl overflow-hidden dark-section p-12 md:p-16 text-center"
         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
       >
         <Ripple mainCircleSize={100} mainCircleOpacity={0.15} numCircles={6} />
@@ -154,12 +154,12 @@ export function CTABanner() {
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{t('cta.subtitle')}</p>
           <Link to="/contact">
             <ShimmerButton
-              shimmerColor="#2d6a4f"
-              background="rgba(255,255,255,1)"
+              shimmerColor="#ff6b81"
+              background="rgba(233,69,96,1)"
               borderRadius="12px"
               className="px-8 py-4 mx-auto"
             >
-              <span className="text-brand-dark font-semibold flex items-center gap-2">
+              <span className="text-white font-semibold flex items-center gap-2">
                 {t('cta.button')} <ArrowRight size={18} />
               </span>
             </ShimmerButton>

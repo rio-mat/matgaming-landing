@@ -60,7 +60,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-surface/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/10' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/5' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="font-display text-2xl font-bold gradient-text tracking-tight">
           MATGAMING
@@ -74,16 +74,16 @@ export default function Navbar() {
               onMouseEnter={() => setDropdown(link.label)}
               onMouseLeave={() => setDropdown(null)}
             >
-              <button className="flex items-center gap-1 text-sm text-slate-400 hover:text-white transition px-3 py-2 rounded-lg hover:bg-white/5">
+              <button className={`flex items-center gap-1 text-sm transition px-3 py-2 rounded-lg ${scrolled ? 'text-slate-600 hover:text-brand hover:bg-slate-50' : 'text-white/70 hover:text-white hover:bg-white/5'}`}>
                 {link.label} <ChevronDown size={14} />
               </button>
               {dropdown === link.label && (
-                <div className="absolute top-full left-0 mt-1 w-60 bg-surface-2 border border-border rounded-xl p-2 shadow-2xl shadow-black/20">
+                <div className="absolute top-full left-0 mt-1 w-60 bg-white border border-border rounded-xl p-2 shadow-2xl shadow-black/10">
                   {link.sub.map((s) => (
                     <Link
                       key={s.href}
                       to={s.href}
-                      className="block text-sm text-slate-400 hover:text-white hover:bg-white/5 px-3 py-2.5 rounded-lg transition"
+                      className="block text-sm text-slate-600 hover:text-accent hover:bg-slate-50 px-3 py-2.5 rounded-lg transition"
                     >
                       {s.label}
                     </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <Link to="/contact" className="text-sm text-slate-400 hover:text-white transition px-3 py-2">
+          <Link to="/contact" className={`text-sm transition px-3 py-2 ${scrolled ? 'text-slate-600 hover:text-brand' : 'text-white/70 hover:text-white'}`}>
             {t('nav.contact')}
           </Link>
         </div>
@@ -104,18 +104,18 @@ export default function Navbar() {
             onMouseEnter={() => setDropdown('lang')}
             onMouseLeave={() => setDropdown(null)}
           >
-            <button className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition px-2.5 py-2 rounded-lg hover:bg-white/5">
+            <button className={`flex items-center gap-1.5 text-sm transition px-2.5 py-2 rounded-lg ${scrolled ? 'text-slate-600 hover:text-brand hover:bg-slate-50' : 'text-white/70 hover:text-white hover:bg-white/5'}`}>
               <Globe size={15} />
               <span>{currentLang.flag}</span>
               <ChevronDown size={12} />
             </button>
             {dropdown === 'lang' && (
-              <div className="absolute top-full right-0 mt-1 w-44 bg-surface-2 border border-border rounded-xl p-2 shadow-2xl shadow-black/20">
+              <div className="absolute top-full right-0 mt-1 w-44 bg-white border border-border rounded-xl p-2 shadow-2xl shadow-black/10">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => changeLang(lang.code)}
-                    className={`w-full flex items-center gap-2.5 text-sm px-3 py-2.5 rounded-lg transition ${lang.code === i18n.language ? 'text-white bg-white/5' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+                    className={`w-full flex items-center gap-2.5 text-sm px-3 py-2.5 rounded-lg transition ${lang.code === i18n.language ? 'text-accent bg-accent/5' : 'text-slate-600 hover:text-brand hover:bg-slate-50'}`}
                   >
                     <span className="text-base">{lang.flag}</span>
                     {lang.label}
@@ -125,10 +125,10 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="https://bo.matgaming.net" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition px-3 py-2 rounded-lg hover:bg-white/5 border border-border">
+          <a href="https://bo.matgaming.net" target="_blank" rel="noopener noreferrer" className={`text-sm transition px-3 py-2 rounded-lg border ${scrolled ? 'text-slate-600 border-border hover:border-accent hover:text-accent' : 'text-white/70 border-white/15 hover:border-white/30 hover:text-white'}`}>
             Backoffice
           </a>
-          <a href="https://matslot.com" target="_blank" rel="noopener noreferrer" className="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
+          <a href="https://matslot.com" target="_blank" rel="noopener noreferrer" className="bg-accent hover:bg-accent/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
             Platform
           </a>
         </div>
