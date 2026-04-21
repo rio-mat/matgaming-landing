@@ -13,14 +13,66 @@ import { BlurFade } from '../components/magicui/blur-fade'
 
 const bannerHrefs = ['/casino-aggregator', '/sportsbook-aggregator', '/white-label', '/crypto-casino', '/curacao-license', '/anjouan-license']
 
-const heroImages = [
-  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/Entry-img-glow-qvc2zvtlkgz3cwlck89j34e8rjpz2n0morzssiegbs.webp',
-  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/Entry-img-glow-qvc2zvtlkgz3cwlck89j34e8rjpz2n0morzssiegbs.webp',
-  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-white-label-qvc4s528ogxb4v3exn4pcl3ryq5bvf4q1wkjzmmo8k.webp',
-  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-crypto-qvc4vyanrwyvqeu98fxoxnc7ref4q1c0rmvpcpymue.webp',
-  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-turnkey-qvc4vgfqsfgq3ca0kkqbn8zbensy0zamubf7xrpoac.webp',
-  'https://dstgaming.com/wp-content/uploads/elementor/thumbs/solution-KV-turnkey-qvc4vgfqsfgq3ca0kkqbn8zbensy0zamubf7xrpoac.webp',
-]
+
+function SliderVisual({ index }: { index: number }) {
+  const visuals = [
+    // Casino Aggregator - slot, cards, dice
+    <div key="casino" className="relative w-80 h-80">
+      <div className="absolute top-4 left-8 text-7xl animate-[bounce_3s_ease-in-out_infinite]">🎰</div>
+      <div className="absolute top-16 right-4 text-5xl animate-[bounce_4s_ease-in-out_infinite_0.5s]">🃏</div>
+      <div className="absolute bottom-20 left-4 text-5xl animate-[bounce_3.5s_ease-in-out_infinite_1s]">🎲</div>
+      <div className="absolute bottom-8 right-12 text-6xl animate-[bounce_4.5s_ease-in-out_infinite_0.3s]">💎</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-6xl">🎮</div>
+      <div className="absolute top-0 right-0 text-3xl animate-[spin_8s_linear_infinite]">⭐</div>
+    </div>,
+    // Sportsbook - football, basketball, tennis
+    <div key="sports" className="relative w-80 h-80">
+      <div className="absolute top-4 left-12 text-7xl animate-[bounce_3s_ease-in-out_infinite]">⚽</div>
+      <div className="absolute top-20 right-4 text-5xl animate-[bounce_3.5s_ease-in-out_infinite_0.5s]">🏀</div>
+      <div className="absolute bottom-24 left-4 text-5xl animate-[bounce_4s_ease-in-out_infinite_1s]">🎾</div>
+      <div className="absolute bottom-4 right-8 text-5xl animate-[bounce_4.5s_ease-in-out_infinite_0.3s]">🏈</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-6xl">🏆</div>
+      <div className="absolute bottom-16 left-1/2 text-4xl animate-[bounce_3s_ease-in-out_infinite_0.8s]">🎯</div>
+    </div>,
+    // White Label - dashboard, rocket, settings
+    <div key="whitelabel" className="relative w-80 h-80">
+      <div className="absolute top-2 left-1/2 -translate-x-1/2 text-7xl animate-[bounce_3s_ease-in-out_infinite]">🚀</div>
+      <div className="absolute top-24 left-4 text-5xl animate-[bounce_4s_ease-in-out_infinite_0.5s]">📊</div>
+      <div className="absolute top-20 right-4 text-5xl animate-[bounce_3.5s_ease-in-out_infinite_1s]">⚙️</div>
+      <div className="absolute bottom-16 left-12 text-4xl animate-[bounce_4.5s_ease-in-out_infinite_0.3s]">🎨</div>
+      <div className="absolute bottom-8 right-8 text-5xl animate-[bounce_3s_ease-in-out_infinite_0.8s]">💳</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-5xl">🖥️</div>
+    </div>,
+    // Crypto Casino - bitcoin, ethereum, coins
+    <div key="crypto" className="relative w-80 h-80">
+      <div className="absolute top-4 left-8 text-7xl animate-[bounce_3s_ease-in-out_infinite]">₿</div>
+      <div className="absolute top-12 right-8 text-5xl animate-[bounce_4s_ease-in-out_infinite_0.5s]">Ξ</div>
+      <div className="absolute bottom-20 left-4 text-5xl animate-[bounce_3.5s_ease-in-out_infinite_1s]">🪙</div>
+      <div className="absolute bottom-4 right-4 text-5xl animate-[bounce_4.5s_ease-in-out_infinite_0.3s]">🔒</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-5xl">💰</div>
+      <div className="absolute top-0 right-0 text-3xl animate-[spin_6s_linear_infinite]">⛓️</div>
+    </div>,
+    // Curacao License - document, seal, globe
+    <div key="curacao" className="relative w-80 h-80">
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 text-7xl animate-[bounce_3s_ease-in-out_infinite]">📜</div>
+      <div className="absolute top-24 left-4 text-5xl animate-[bounce_4s_ease-in-out_infinite_0.5s]">🏛️</div>
+      <div className="absolute top-20 right-8 text-5xl animate-[bounce_3.5s_ease-in-out_infinite_1s]">✅</div>
+      <div className="absolute bottom-16 left-12 text-4xl animate-[bounce_4.5s_ease-in-out_infinite_0.3s]">🌍</div>
+      <div className="absolute bottom-8 right-8 text-5xl animate-[bounce_3s_ease-in-out_infinite_0.8s]">⚖️</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-5xl">🛡️</div>
+    </div>,
+    // Anjouan License - speed, shield, checkmark
+    <div key="anjouan" className="relative w-80 h-80">
+      <div className="absolute top-4 left-8 text-7xl animate-[bounce_3s_ease-in-out_infinite]">🛡️</div>
+      <div className="absolute top-16 right-4 text-5xl animate-[bounce_4s_ease-in-out_infinite_0.5s]">⚡</div>
+      <div className="absolute bottom-20 left-4 text-5xl animate-[bounce_3.5s_ease-in-out_infinite_1s]">📋</div>
+      <div className="absolute bottom-4 right-8 text-5xl animate-[bounce_4.5s_ease-in-out_infinite_0.3s]">🏢</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-5xl">✨</div>
+      <div className="absolute top-0 right-0 text-3xl animate-[spin_8s_linear_infinite]">🔑</div>
+    </div>,
+  ]
+  return visuals[index] || visuals[0]
+}
 
 function HeroBanner() {
   const { t } = useTranslation()
@@ -90,14 +142,13 @@ function HeroBanner() {
             </div>
 
             <div className="hidden lg:flex justify-center">
-              <motion.img
-                src={heroImages[current]}
-                alt=""
-                className="max-h-[450px] w-auto object-contain drop-shadow-[0_0_60px_rgba(232,227,78,0.15)]"
+              <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-              />
+              >
+                <SliderVisual index={current} />
+              </motion.div>
             </div>
           </motion.div>
         </AnimatePresence>
