@@ -48,7 +48,7 @@ export function SectionHeader({ badge, title, i18nKey, subtitle }: { badge?: str
           {badge}
         </span>
       )}
-      <h2 className="font-display text-3xl md:text-5xl font-bold text-brand mb-4 leading-tight">
+      <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
         {renderTitle()}
       </h2>
       {subtitle && <p className="text-slate-400 text-lg leading-relaxed">{subtitle}</p>}
@@ -60,7 +60,7 @@ export function PageHero({ badge, title, subtitle, cta, ctaHref = '/contact' }: 
   badge: string; title: ReactNode; subtitle: string; cta?: string; ctaHref?: string
 }) {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden dark-section">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-brand/8 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/6 rounded-full blur-[120px]" />
@@ -144,7 +144,7 @@ export function CTABanner() {
   return (
     <Section>
       <motion.div
-        className="relative rounded-3xl overflow-hidden dark-section p-12 md:p-16 text-center"
+        className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-brand-dark via-brand to-brand-light p-12 md:p-16 text-center"
         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
       >
         <Ripple mainCircleSize={100} mainCircleOpacity={0.15} numCircles={6} />
@@ -154,12 +154,12 @@ export function CTABanner() {
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">{t('cta.subtitle')}</p>
           <Link to="/contact">
             <ShimmerButton
-              shimmerColor="#ff6b81"
-              background="rgba(233,69,96,1)"
-              borderRadius="12px"
+              shimmerColor="#f0ed6a"
+              background="rgba(232,227,78,1)"
+              borderRadius="100px"
               className="px-8 py-4 mx-auto"
             >
-              <span className="text-white font-semibold flex items-center gap-2">
+              <span className="text-brand-dark font-semibold flex items-center gap-2">
                 {t('cta.button')} <ArrowRight size={18} />
               </span>
             </ShimmerButton>

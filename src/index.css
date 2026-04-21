@@ -3,16 +3,16 @@
 @theme {
   --font-sans: 'DM Sans', system-ui, sans-serif;
   --font-display: 'Sora', system-ui, sans-serif;
-  --color-brand: #1a1a2e;
-  --color-brand-light: #16213e;
-  --color-brand-dark: #0f0f23;
-  --color-accent: #e94560;
-  --color-accent-light: #ff6b81;
-  --color-surface: #ffffff;
-  --color-surface-2: #f8f9fc;
-  --color-surface-3: #eef0f5;
-  --color-border: #e2e5ed;
-  --color-border-light: #c8cdd8;
+  --color-brand: #1a1a5e;
+  --color-brand-light: #2d2d8a;
+  --color-brand-dark: #0f0f3d;
+  --color-accent: #e8e34e;
+  --color-accent-light: #f0ed6a;
+  --color-surface: #12123b;
+  --color-surface-2: #1a1a5e;
+  --color-surface-3: #232370;
+  --color-border: #2a2a7a;
+  --color-border-light: #3d3d9e;
 }
 
 html {
@@ -22,46 +22,28 @@ html {
 body {
   margin: 0;
   background: var(--color-surface);
-  color: #4a5068;
+  color: #b8b8d4;
   font-family: var(--font-sans);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #e94560, #ff6b81);
+  background: linear-gradient(135deg, #e8e34e, #f0ed6a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.dark-section {
-  background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
-  color: #c8cdd8;
-}
-
 .card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  transition: all 0.3s;
-}
-
-.card:hover {
-  border-color: var(--color-border-light);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(26, 26, 46, 0.08);
-}
-
-.card-dark {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
   transition: all 0.3s;
 }
 
-.card-dark:hover {
+.card:hover {
   border-color: rgba(255,255,255,0.15);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(233, 69, 96, 0.08);
+  box-shadow: 0 12px 40px rgba(232, 227, 78, 0.06);
 }
 
 .provider-logo {
@@ -78,19 +60,15 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-100% - var(--gap))); }
 }
-
 @keyframes marquee-vertical {
   from { transform: translateY(0); }
   to { transform: translateY(calc(-100% - var(--gap))); }
 }
-
 .animate-marquee { animation: marquee var(--duration) linear infinite; }
 .animate-marquee-vertical { animation: marquee-vertical var(--duration) linear infinite; }
 .direction-reverse { animation-direction: reverse; }
 
-@keyframes shimmer-slide {
-  to { transform: translate(calc(100cqw - 100%), 0); }
-}
+@keyframes shimmer-slide { to { transform: translate(calc(100cqw - 100%), 0); } }
 .animate-shimmer-slide { animation: shimmer-slide var(--speed) ease-in-out infinite alternate; }
 
 @keyframes shiny-text {
